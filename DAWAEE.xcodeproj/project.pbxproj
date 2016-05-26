@@ -14,6 +14,82 @@
 		2900E7A81C9A72BD006F3345 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2900E7A71C9A72BD006F3345 /* ViewController.xib */; };
 		290370111CA3BB2700899736 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2903700F1CA3BB2700899736 /* HomeViewController.m */; };
 		290370121CA3BB2700899736 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 290370101CA3BB2700899736 /* HomeViewController.xib */; };
+		2903DCA51CE1A9AF003C9E61 /* Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2903DCA31CE1A9AF003C9E61 /* Selected@2x.png */; };
+		2903DCA61CE1A9AF003C9E61 /* UnSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2903DCA41CE1A9AF003C9E61 /* UnSelected@2x.png */; };
+		29046F521CB62E7F00B0B6CE /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29046F511CB62E7F00B0B6CE /* back@2x.png */; };
+		2904B3BA1CF6C02F001BA723 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2904B3B01CF6C02F001BA723 /* FMDatabase.m */; };
+		2904B3BB1CF6C02F001BA723 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2904B3B21CF6C02F001BA723 /* FMDatabaseAdditions.m */; };
+		2904B3BC1CF6C02F001BA723 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2904B3B41CF6C02F001BA723 /* FMDatabasePool.m */; };
+		2904B3BD1CF6C02F001BA723 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2904B3B61CF6C02F001BA723 /* FMDatabaseQueue.m */; };
+		2904B3BE1CF6C02F001BA723 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2904B3B91CF6C02F001BA723 /* FMResultSet.m */; };
+		2904B3C01CF6C04D001BA723 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2904B3BF1CF6C04D001BA723 /* libsqlite3.0.tbd */; };
+		2904B3C41CF6C252001BA723 /* CommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2904B3C31CF6C252001BA723 /* CommonFunctions.m */; };
+		2904B3C61CF6C310001BA723 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2904B3C51CF6C310001BA723 /* QuartzCore.framework */; };
+		2904B3C81CF6C31A001BA723 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2904B3C71CF6C31A001BA723 /* CoreText.framework */; };
+		2904B3D01CF6E3DF001BA723 /* NewCalenderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2904B3CE1CF6E3DF001BA723 /* NewCalenderTableViewCell.m */; };
+		2904B3D11CF6E3DF001BA723 /* NewCalenderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2904B3CF1CF6E3DF001BA723 /* NewCalenderTableViewCell.xib */; };
+		290515531CB4FB1200EAB1B3 /* circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 290515521CB4FB1200EAB1B3 /* circle@2x.png */; };
+		290515921CB4FE0F00EAB1B3 /* NSCalendar+Components.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905155B1CB4FE0F00EAB1B3 /* NSCalendar+Components.m */; };
+		290515931CB4FE0F00EAB1B3 /* NSCalendar+DateComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905155D1CB4FE0F00EAB1B3 /* NSCalendar+DateComparison.m */; };
+		290515941CB4FE0F00EAB1B3 /* NSCalendar+DateManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905155F1CB4FE0F00EAB1B3 /* NSCalendar+DateManipulation.m */; };
+		290515951CB4FE0F00EAB1B3 /* NSCalendar+Juncture.m in Sources */ = {isa = PBXBuildFile; fileRef = 290515611CB4FE0F00EAB1B3 /* NSCalendar+Juncture.m */; };
+		290515961CB4FE0F00EAB1B3 /* NSCalendar+Ranges.m in Sources */ = {isa = PBXBuildFile; fileRef = 290515631CB4FE0F00EAB1B3 /* NSCalendar+Ranges.m */; };
+		290515971CB4FE0F00EAB1B3 /* NSDate+Components.m in Sources */ = {isa = PBXBuildFile; fileRef = 290515671CB4FE0F00EAB1B3 /* NSDate+Components.m */; };
+		290515981CB4FE0F00EAB1B3 /* NSDate+Description.m in Sources */ = {isa = PBXBuildFile; fileRef = 290515691CB4FE0F00EAB1B3 /* NSDate+Description.m */; };
+		290515991CB4FE0F00EAB1B3 /* NSDateComponents+AllComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905156B1CB4FE0F00EAB1B3 /* NSDateComponents+AllComponents.m */; };
+		2905159A1CB4FE0F00EAB1B3 /* NSString+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905156D1CB4FE0F00EAB1B3 /* NSString+Color.m */; };
+		2905159B1CB4FE0F00EAB1B3 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 290515701CB4FE0F00EAB1B3 /* UIColor+HexString.m */; };
+		2905159C1CB4FE0F00EAB1B3 /* UIView+AnimatedFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 290515731CB4FE0F00EAB1B3 /* UIView+AnimatedFrame.m */; };
+		2905159D1CB4FE0F00EAB1B3 /* UIView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 290515751CB4FE0F00EAB1B3 /* UIView+Border.m */; };
+		2905159E1CB4FE0F00EAB1B3 /* CKCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 290515781CB4FE0F00EAB1B3 /* CKCalendarCell.m */; };
+		2905159F1CB4FE0F00EAB1B3 /* CKCalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905157A1CB4FE0F00EAB1B3 /* CKCalendarEvent.m */; };
+		290515A01CB4FE0F00EAB1B3 /* CKCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905157C1CB4FE0F00EAB1B3 /* CKCalendarHeaderView.m */; };
+		290515A11CB4FE0F00EAB1B3 /* CKCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905157E1CB4FE0F00EAB1B3 /* CKCalendarView.m */; };
+		290515A21CB4FE0F00EAB1B3 /* CKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 290515801CB4FE0F00EAB1B3 /* CKTableViewCell.m */; };
+		290515A31CB4FE0F00EAB1B3 /* MBPolygonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 290515821CB4FE0F00EAB1B3 /* MBPolygonView.m */; };
+		290515A41CB4FE0F00EAB1B3 /* CKCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905158C1CB4FE0F00EAB1B3 /* CKCalendarViewController.m */; };
+		290515A51CB4FE0F00EAB1B3 /* CKCalendarViewControllerInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905158E1CB4FE0F00EAB1B3 /* CKCalendarViewControllerInternal.m */; };
+		290515A71CB4FE0F00EAB1B3 /* CKDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 290515911CB4FE0F00EAB1B3 /* CKDemoViewController.m */; };
+		2905AA291CBE311200CCF32E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905AA271CBE311200CCF32E /* ProfileViewController.m */; };
+		2905AA2A1CBE311200CCF32E /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2905AA281CBE311200CCF32E /* ProfileViewController.xib */; };
+		2905AA2E1CBE342000CCF32E /* AskYourPharmacistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905AA2C1CBE342000CCF32E /* AskYourPharmacistViewController.m */; };
+		2905AA2F1CBE342000CCF32E /* AskYourPharmacistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2905AA2D1CBE342000CCF32E /* AskYourPharmacistViewController.xib */; };
+		2905AA331CBE400900CCF32E /* DrugInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905AA311CBE400900CCF32E /* DrugInformationViewController.m */; };
+		2905AA341CBE400900CCF32E /* DrugInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2905AA321CBE400900CCF32E /* DrugInformationViewController.xib */; };
+		2905AA3D1CBE401E00CCF32E /* FirstAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905AA3B1CBE401E00CCF32E /* FirstAdViewController.m */; };
+		2905AA3E1CBE401E00CCF32E /* FirstAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2905AA3C1CBE401E00CCF32E /* FirstAdViewController.xib */; };
+		2905AA421CBE406A00CCF32E /* MedicineDeliveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905AA401CBE406A00CCF32E /* MedicineDeliveryViewController.m */; };
+		2905AA431CBE406A00CCF32E /* MedicineDeliveryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2905AA411CBE406A00CCF32E /* MedicineDeliveryViewController.xib */; };
+		2905AA471CBE407300CCF32E /* MyMedicationProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905AA451CBE407300CCF32E /* MyMedicationProfileViewController.m */; };
+		2905AA481CBE407300CCF32E /* MyMedicationProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2905AA461CBE407300CCF32E /* MyMedicationProfileViewController.xib */; };
+		2905AA511CBE408400CCF32E /* PharmaciesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905AA4F1CBE408400CCF32E /* PharmaciesViewController.m */; };
+		2905AA521CBE408400CCF32E /* PharmaciesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2905AA501CBE408400CCF32E /* PharmaciesViewController.xib */; };
+		2905AA561CBE408B00CCF32E /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905AA541CBE408B00CCF32E /* SettingsViewController.m */; };
+		2905AA571CBE408B00CCF32E /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2905AA551CBE408B00CCF32E /* SettingsViewController.xib */; };
+		2905AA5B1CBE410800CCF32E /* FAQsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905AA591CBE410800CCF32E /* FAQsViewController.m */; };
+		2905AA5C1CBE410800CCF32E /* FAQsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2905AA5A1CBE410800CCF32E /* FAQsViewController.xib */; };
+		2905AA601CBE431600CCF32E /* NewsArticlesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2905AA5E1CBE431600CCF32E /* NewsArticlesViewController.m */; };
+		2905AA611CBE431600CCF32E /* NewsArticlesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2905AA5F1CBE431600CCF32E /* NewsArticlesViewController.xib */; };
+		2906ED3B1CB37E5400459FE2 /* menu_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906ED3A1CB37E5400459FE2 /* menu_icon@2x.png */; };
+		2906ED601CB38EC000459FE2 /* Ask Your Pharmacist@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906ED541CB38EC000459FE2 /* Ask Your Pharmacist@2x.png */; };
+		2906ED611CB38EC000459FE2 /* Drug Information@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906ED551CB38EC000459FE2 /* Drug Information@2x.png */; };
+		2906ED621CB38EC000459FE2 /* FAQ's@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906ED561CB38EC000459FE2 /* FAQ's@2x.png */; };
+		2906ED631CB38EC000459FE2 /* First Aid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906ED571CB38EC000459FE2 /* First Aid@2x.png */; };
+		2906ED641CB38EC000459FE2 /* Home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906ED581CB38EC000459FE2 /* Home@2x.png */; };
+		2906ED651CB38EC000459FE2 /* Logout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906ED591CB38EC000459FE2 /* Logout@2x.png */; };
+		2906ED661CB38EC000459FE2 /* Medicine Delivery@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906ED5A1CB38EC000459FE2 /* Medicine Delivery@2x.png */; };
+		2906ED671CB38EC000459FE2 /* My Medication Profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906ED5B1CB38EC000459FE2 /* My Medication Profile@2x.png */; };
+		2906ED681CB38EC000459FE2 /* News & Articles@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906ED5C1CB38EC000459FE2 /* News & Articles@2x.png */; };
+		2906ED691CB38EC000459FE2 /* Pharmacies@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906ED5D1CB38EC000459FE2 /* Pharmacies@2x.png */; };
+		2906ED6A1CB38EC000459FE2 /* Profiles@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906ED5E1CB38EC000459FE2 /* Profiles@2x.png */; };
+		2906ED6B1CB38EC000459FE2 /* Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906ED5F1CB38EC000459FE2 /* Settings@2x.png */; };
+		2906ED6E1CB3B03B00459FE2 /* left_slider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906ED6C1CB3B03B00459FE2 /* left_slider@2x.png */; };
+		2906ED6F1CB3B03B00459FE2 /* right_slider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906ED6D1CB3B03B00459FE2 /* right_slider@2x.png */; };
+		2907B0811CCF42DD00BE609E /* ProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2907B07F1CCF42DD00BE609E /* ProfileTableViewCell.m */; };
+		2907B0821CCF42DD00BE609E /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2907B0801CCF42DD00BE609E /* ProfileTableViewCell.xib */; };
+		2907B0841CCF520400BE609E /* profile@2x.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2907B0831CCF520400BE609E /* profile@2x.PNG */; };
+		2907B0881CCF579E00BE609E /* ProfileDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2907B0861CCF579E00BE609E /* ProfileDetailViewController.m */; };
+		2907B0891CCF579E00BE609E /* ProfileDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2907B0871CCF579E00BE609E /* ProfileDetailViewController.xib */; };
 		290805CB1C9E8A9500B6227C /* SIGNINViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 290805C91C9E8A9500B6227C /* SIGNINViewController.m */; };
 		290805CC1C9E8A9500B6227C /* SIGNINViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 290805CA1C9E8A9500B6227C /* SIGNINViewController.xib */; };
 		290806351C9E989200B6227C /* IQBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 290805E81C9E989200B6227C /* IQBarButtonItem.m */; };
@@ -55,6 +131,16 @@
 		290806B61C9E9BFC00B6227C /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 290806A21C9E9BFC00B6227C /* UIImageView+HighlightedWebCache.m */; };
 		290806B71C9E9BFC00B6227C /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 290806A41C9E9BFC00B6227C /* UIImageView+WebCache.m */; };
 		290806B81C9E9BFC00B6227C /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 290806A61C9E9BFC00B6227C /* UIView+WebCacheOperation.m */; };
+		290BDC171CE84CB700BC0C43 /* ProfileMedicineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 290BDC151CE84CB700BC0C43 /* ProfileMedicineViewController.m */; };
+		290BDC1A1CE8552800BC0C43 /* ProfileMedicineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 290BDC191CE8552800BC0C43 /* ProfileMedicineViewController.xib */; };
+		290BDC1E1CE8609C00BC0C43 /* AddMedicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 290BDC1C1CE8609C00BC0C43 /* AddMedicationViewController.m */; };
+		290BDC1F1CE8609C00BC0C43 /* AddMedicationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 290BDC1D1CE8609C00BC0C43 /* AddMedicationViewController.xib */; };
+		290BDC271CE8821500BC0C43 /* JNExpandableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 290BDC261CE8821500BC0C43 /* JNExpandableTableView.m */; };
+		2929A4181CE080F500C9C9CC /* AddProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2929A4161CE080F500C9C9CC /* AddProfileViewController.m */; };
+		2929A4191CE080F500C9C9CC /* AddProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2929A4171CE080F500C9C9CC /* AddProfileViewController.xib */; };
+		2929A41B1CE09B3500C9C9CC /* cameraicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2929A41A1CE09B3500C9C9CC /* cameraicon@2x.png */; };
+		29448C931CE31BD200F351EA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29448C921CE31BD200F351EA /* MapKit.framework */; };
+		296D9B701CA92A1B00405A0A /* logo_small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 296D9B6F1CA92A1B00405A0A /* logo_small@2x.png */; };
 		29B2BB3A1CA7BE96009ECC22 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B2BB391CA7BE96009ECC22 /* Constants.m */; };
 		29C8EC421CA7ADE400233032 /* CVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C8EC401CA7ADE400233032 /* CVCell.m */; };
 		29C8EC431CA7ADE400233032 /* CVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29C8EC411CA7ADE400233032 /* CVCell.xib */; };
@@ -73,6 +159,132 @@
 		2903700E1CA3BB2700899736 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		2903700F1CA3BB2700899736 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		290370101CA3BB2700899736 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		2903DCA31CE1A9AF003C9E61 /* Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Selected@2x.png"; sourceTree = "<group>"; };
+		2903DCA41CE1A9AF003C9E61 /* UnSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UnSelected@2x.png"; sourceTree = "<group>"; };
+		29046F511CB62E7F00B0B6CE /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		2904B3AF1CF6C02F001BA723 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		2904B3B01CF6C02F001BA723 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		2904B3B11CF6C02F001BA723 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		2904B3B21CF6C02F001BA723 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		2904B3B31CF6C02F001BA723 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		2904B3B41CF6C02F001BA723 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		2904B3B51CF6C02F001BA723 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		2904B3B61CF6C02F001BA723 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		2904B3B71CF6C02F001BA723 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		2904B3B81CF6C02F001BA723 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		2904B3B91CF6C02F001BA723 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		2904B3BF1CF6C04D001BA723 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		2904B3C21CF6C252001BA723 /* CommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonFunctions.h; sourceTree = "<group>"; };
+		2904B3C31CF6C252001BA723 /* CommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonFunctions.m; sourceTree = "<group>"; };
+		2904B3C51CF6C310001BA723 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2904B3C71CF6C31A001BA723 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		2904B3CC1CF6CB6C001BA723 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2904B3CD1CF6E3DF001BA723 /* NewCalenderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewCalenderTableViewCell.h; sourceTree = "<group>"; };
+		2904B3CE1CF6E3DF001BA723 /* NewCalenderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewCalenderTableViewCell.m; sourceTree = "<group>"; };
+		2904B3CF1CF6E3DF001BA723 /* NewCalenderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewCalenderTableViewCell.xib; sourceTree = "<group>"; };
+		290515521CB4FB1200EAB1B3 /* circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle@2x.png"; sourceTree = "<group>"; };
+		290515561CB4FE0F00EAB1B3 /* CalendarKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarKit.h; sourceTree = "<group>"; };
+		2905155A1CB4FE0F00EAB1B3 /* NSCalendar+Components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+Components.h"; sourceTree = "<group>"; };
+		2905155B1CB4FE0F00EAB1B3 /* NSCalendar+Components.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+Components.m"; sourceTree = "<group>"; };
+		2905155C1CB4FE0F00EAB1B3 /* NSCalendar+DateComparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+DateComparison.h"; sourceTree = "<group>"; };
+		2905155D1CB4FE0F00EAB1B3 /* NSCalendar+DateComparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+DateComparison.m"; sourceTree = "<group>"; };
+		2905155E1CB4FE0F00EAB1B3 /* NSCalendar+DateManipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+DateManipulation.h"; sourceTree = "<group>"; };
+		2905155F1CB4FE0F00EAB1B3 /* NSCalendar+DateManipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+DateManipulation.m"; sourceTree = "<group>"; };
+		290515601CB4FE0F00EAB1B3 /* NSCalendar+Juncture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+Juncture.h"; sourceTree = "<group>"; };
+		290515611CB4FE0F00EAB1B3 /* NSCalendar+Juncture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+Juncture.m"; sourceTree = "<group>"; };
+		290515621CB4FE0F00EAB1B3 /* NSCalendar+Ranges.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+Ranges.h"; sourceTree = "<group>"; };
+		290515631CB4FE0F00EAB1B3 /* NSCalendar+Ranges.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+Ranges.m"; sourceTree = "<group>"; };
+		290515641CB4FE0F00EAB1B3 /* NSCalendarCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCalendarCategories.h; sourceTree = "<group>"; };
+		290515661CB4FE0F00EAB1B3 /* NSDate+Components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Components.h"; sourceTree = "<group>"; };
+		290515671CB4FE0F00EAB1B3 /* NSDate+Components.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Components.m"; sourceTree = "<group>"; };
+		290515681CB4FE0F00EAB1B3 /* NSDate+Description.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Description.h"; sourceTree = "<group>"; };
+		290515691CB4FE0F00EAB1B3 /* NSDate+Description.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Description.m"; sourceTree = "<group>"; };
+		2905156A1CB4FE0F00EAB1B3 /* NSDateComponents+AllComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateComponents+AllComponents.h"; sourceTree = "<group>"; };
+		2905156B1CB4FE0F00EAB1B3 /* NSDateComponents+AllComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateComponents+AllComponents.m"; sourceTree = "<group>"; };
+		2905156C1CB4FE0F00EAB1B3 /* NSString+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Color.h"; sourceTree = "<group>"; };
+		2905156D1CB4FE0F00EAB1B3 /* NSString+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Color.m"; sourceTree = "<group>"; };
+		2905156F1CB4FE0F00EAB1B3 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
+		290515701CB4FE0F00EAB1B3 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
+		290515721CB4FE0F00EAB1B3 /* UIView+AnimatedFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AnimatedFrame.h"; sourceTree = "<group>"; };
+		290515731CB4FE0F00EAB1B3 /* UIView+AnimatedFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AnimatedFrame.m"; sourceTree = "<group>"; };
+		290515741CB4FE0F00EAB1B3 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Border.h"; sourceTree = "<group>"; };
+		290515751CB4FE0F00EAB1B3 /* UIView+Border.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Border.m"; sourceTree = "<group>"; };
+		290515771CB4FE0F00EAB1B3 /* CKCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarCell.h; sourceTree = "<group>"; };
+		290515781CB4FE0F00EAB1B3 /* CKCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCalendarCell.m; sourceTree = "<group>"; };
+		290515791CB4FE0F00EAB1B3 /* CKCalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarEvent.h; sourceTree = "<group>"; };
+		2905157A1CB4FE0F00EAB1B3 /* CKCalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCalendarEvent.m; sourceTree = "<group>"; };
+		2905157B1CB4FE0F00EAB1B3 /* CKCalendarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarHeaderView.h; sourceTree = "<group>"; };
+		2905157C1CB4FE0F00EAB1B3 /* CKCalendarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCalendarHeaderView.m; sourceTree = "<group>"; };
+		2905157D1CB4FE0F00EAB1B3 /* CKCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarView.h; sourceTree = "<group>"; };
+		2905157E1CB4FE0F00EAB1B3 /* CKCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCalendarView.m; sourceTree = "<group>"; };
+		2905157F1CB4FE0F00EAB1B3 /* CKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKTableViewCell.h; sourceTree = "<group>"; };
+		290515801CB4FE0F00EAB1B3 /* CKTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKTableViewCell.m; sourceTree = "<group>"; };
+		290515811CB4FE0F00EAB1B3 /* MBPolygonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPolygonView.h; sourceTree = "<group>"; };
+		290515821CB4FE0F00EAB1B3 /* MBPolygonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPolygonView.m; sourceTree = "<group>"; };
+		290515841CB4FE0F00EAB1B3 /* CKCalendarCellColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarCellColors.h; sourceTree = "<group>"; };
+		290515851CB4FE0F00EAB1B3 /* CKCalendarDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarDataSource.h; sourceTree = "<group>"; };
+		290515861CB4FE0F00EAB1B3 /* CKCalendarDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarDelegate.h; sourceTree = "<group>"; };
+		290515871CB4FE0F00EAB1B3 /* CKCalendarHeaderColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarHeaderColors.h; sourceTree = "<group>"; };
+		290515881CB4FE0F00EAB1B3 /* CKCalendarMonthCellStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarMonthCellStates.h; sourceTree = "<group>"; };
+		290515891CB4FE0F00EAB1B3 /* CKCalendarViewModes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarViewModes.h; sourceTree = "<group>"; };
+		2905158B1CB4FE0F00EAB1B3 /* CKCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarViewController.h; sourceTree = "<group>"; };
+		2905158C1CB4FE0F00EAB1B3 /* CKCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCalendarViewController.m; sourceTree = "<group>"; };
+		2905158D1CB4FE0F00EAB1B3 /* CKCalendarViewControllerInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarViewControllerInternal.h; sourceTree = "<group>"; };
+		2905158E1CB4FE0F00EAB1B3 /* CKCalendarViewControllerInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCalendarViewControllerInternal.m; sourceTree = "<group>"; };
+		290515901CB4FE0F00EAB1B3 /* CKDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKDemoViewController.h; sourceTree = "<group>"; };
+		290515911CB4FE0F00EAB1B3 /* CKDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKDemoViewController.m; sourceTree = "<group>"; };
+		2905AA261CBE311200CCF32E /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		2905AA271CBE311200CCF32E /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		2905AA281CBE311200CCF32E /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		2905AA2B1CBE342000CCF32E /* AskYourPharmacistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskYourPharmacistViewController.h; sourceTree = "<group>"; };
+		2905AA2C1CBE342000CCF32E /* AskYourPharmacistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskYourPharmacistViewController.m; sourceTree = "<group>"; };
+		2905AA2D1CBE342000CCF32E /* AskYourPharmacistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AskYourPharmacistViewController.xib; sourceTree = "<group>"; };
+		2905AA301CBE400900CCF32E /* DrugInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugInformationViewController.h; sourceTree = "<group>"; };
+		2905AA311CBE400900CCF32E /* DrugInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugInformationViewController.m; sourceTree = "<group>"; };
+		2905AA321CBE400900CCF32E /* DrugInformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrugInformationViewController.xib; sourceTree = "<group>"; };
+		2905AA3A1CBE401E00CCF32E /* FirstAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstAdViewController.h; sourceTree = "<group>"; };
+		2905AA3B1CBE401E00CCF32E /* FirstAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstAdViewController.m; sourceTree = "<group>"; };
+		2905AA3C1CBE401E00CCF32E /* FirstAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstAdViewController.xib; sourceTree = "<group>"; };
+		2905AA3F1CBE406A00CCF32E /* MedicineDeliveryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicineDeliveryViewController.h; sourceTree = "<group>"; };
+		2905AA401CBE406A00CCF32E /* MedicineDeliveryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicineDeliveryViewController.m; sourceTree = "<group>"; };
+		2905AA411CBE406A00CCF32E /* MedicineDeliveryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicineDeliveryViewController.xib; sourceTree = "<group>"; };
+		2905AA441CBE407300CCF32E /* MyMedicationProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMedicationProfileViewController.h; sourceTree = "<group>"; };
+		2905AA451CBE407300CCF32E /* MyMedicationProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMedicationProfileViewController.m; sourceTree = "<group>"; };
+		2905AA461CBE407300CCF32E /* MyMedicationProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyMedicationProfileViewController.xib; sourceTree = "<group>"; };
+		2905AA4E1CBE408400CCF32E /* PharmaciesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PharmaciesViewController.h; sourceTree = "<group>"; };
+		2905AA4F1CBE408400CCF32E /* PharmaciesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PharmaciesViewController.m; sourceTree = "<group>"; };
+		2905AA501CBE408400CCF32E /* PharmaciesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PharmaciesViewController.xib; sourceTree = "<group>"; };
+		2905AA531CBE408B00CCF32E /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		2905AA541CBE408B00CCF32E /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		2905AA551CBE408B00CCF32E /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		2905AA581CBE410800CCF32E /* FAQsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQsViewController.h; sourceTree = "<group>"; };
+		2905AA591CBE410800CCF32E /* FAQsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQsViewController.m; sourceTree = "<group>"; };
+		2905AA5A1CBE410800CCF32E /* FAQsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FAQsViewController.xib; sourceTree = "<group>"; };
+		2905AA5D1CBE431600CCF32E /* NewsArticlesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsArticlesViewController.h; sourceTree = "<group>"; };
+		2905AA5E1CBE431600CCF32E /* NewsArticlesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsArticlesViewController.m; sourceTree = "<group>"; };
+		2905AA5F1CBE431600CCF32E /* NewsArticlesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsArticlesViewController.xib; sourceTree = "<group>"; };
+		2906ED3A1CB37E5400459FE2 /* menu_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_icon@2x.png"; sourceTree = "<group>"; };
+		2906ED541CB38EC000459FE2 /* Ask Your Pharmacist@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ask Your Pharmacist@2x.png"; sourceTree = "<group>"; };
+		2906ED551CB38EC000459FE2 /* Drug Information@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Drug Information@2x.png"; sourceTree = "<group>"; };
+		2906ED561CB38EC000459FE2 /* FAQ's@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FAQ's@2x.png"; sourceTree = "<group>"; };
+		2906ED571CB38EC000459FE2 /* First Aid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "First Aid@2x.png"; sourceTree = "<group>"; };
+		2906ED581CB38EC000459FE2 /* Home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home@2x.png"; sourceTree = "<group>"; };
+		2906ED591CB38EC000459FE2 /* Logout@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logout@2x.png"; sourceTree = "<group>"; };
+		2906ED5A1CB38EC000459FE2 /* Medicine Delivery@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Medicine Delivery@2x.png"; sourceTree = "<group>"; };
+		2906ED5B1CB38EC000459FE2 /* My Medication Profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "My Medication Profile@2x.png"; sourceTree = "<group>"; };
+		2906ED5C1CB38EC000459FE2 /* News & Articles@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "News & Articles@2x.png"; sourceTree = "<group>"; };
+		2906ED5D1CB38EC000459FE2 /* Pharmacies@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pharmacies@2x.png"; sourceTree = "<group>"; };
+		2906ED5E1CB38EC000459FE2 /* Profiles@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Profiles@2x.png"; sourceTree = "<group>"; };
+		2906ED5F1CB38EC000459FE2 /* Settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings@2x.png"; sourceTree = "<group>"; };
+		2906ED6C1CB3B03B00459FE2 /* left_slider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_slider@2x.png"; sourceTree = "<group>"; };
+		2906ED6D1CB3B03B00459FE2 /* right_slider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_slider@2x.png"; sourceTree = "<group>"; };
+		2907B07E1CCF42DD00BE609E /* ProfileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewCell.h; sourceTree = "<group>"; };
+		2907B07F1CCF42DD00BE609E /* ProfileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewCell.m; sourceTree = "<group>"; };
+		2907B0801CCF42DD00BE609E /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		2907B0831CCF520400BE609E /* profile@2x.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile@2x.PNG"; sourceTree = "<group>"; };
+		2907B0851CCF579E00BE609E /* ProfileDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileDetailViewController.h; sourceTree = "<group>"; };
+		2907B0861CCF579E00BE609E /* ProfileDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileDetailViewController.m; sourceTree = "<group>"; };
+		2907B0871CCF579E00BE609E /* ProfileDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileDetailViewController.xib; sourceTree = "<group>"; };
 		290805C81C9E8A9500B6227C /* SIGNINViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIGNINViewController.h; sourceTree = "<group>"; };
 		290805C91C9E8A9500B6227C /* SIGNINViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIGNINViewController.m; sourceTree = "<group>"; };
 		290805CA1C9E8A9500B6227C /* SIGNINViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SIGNINViewController.xib; sourceTree = "<group>"; };
@@ -158,6 +370,20 @@
 		290806A41C9E9BFC00B6227C /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		290806A51C9E9BFC00B6227C /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		290806A61C9E9BFC00B6227C /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		290BDC141CE84CB700BC0C43 /* ProfileMedicineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileMedicineViewController.h; sourceTree = "<group>"; };
+		290BDC151CE84CB700BC0C43 /* ProfileMedicineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileMedicineViewController.m; sourceTree = "<group>"; };
+		290BDC191CE8552800BC0C43 /* ProfileMedicineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileMedicineViewController.xib; sourceTree = "<group>"; };
+		290BDC1B1CE8609C00BC0C43 /* AddMedicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMedicationViewController.h; sourceTree = "<group>"; };
+		290BDC1C1CE8609C00BC0C43 /* AddMedicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMedicationViewController.m; sourceTree = "<group>"; };
+		290BDC1D1CE8609C00BC0C43 /* AddMedicationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddMedicationViewController.xib; sourceTree = "<group>"; };
+		290BDC251CE8821500BC0C43 /* JNExpandableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNExpandableTableView.h; sourceTree = "<group>"; };
+		290BDC261CE8821500BC0C43 /* JNExpandableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNExpandableTableView.m; sourceTree = "<group>"; };
+		2929A4151CE080F500C9C9CC /* AddProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddProfileViewController.h; sourceTree = "<group>"; };
+		2929A4161CE080F500C9C9CC /* AddProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddProfileViewController.m; sourceTree = "<group>"; };
+		2929A4171CE080F500C9C9CC /* AddProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddProfileViewController.xib; sourceTree = "<group>"; };
+		2929A41A1CE09B3500C9C9CC /* cameraicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cameraicon@2x.png"; sourceTree = "<group>"; };
+		29448C921CE31BD200F351EA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		296D9B6F1CA92A1B00405A0A /* logo_small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_small@2x.png"; sourceTree = "<group>"; };
 		29B2BB381CA7BE96009ECC22 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		29B2BB391CA7BE96009ECC22 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		29B2BB3B1CA7C1FB009ECC22 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -171,6 +397,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2904B3C81CF6C31A001BA723 /* CoreText.framework in Frameworks */,
+				2904B3C61CF6C310001BA723 /* QuartzCore.framework in Frameworks */,
+				2904B3C01CF6C04D001BA723 /* libsqlite3.0.tbd in Frameworks */,
+				29448C931CE31BD200F351EA /* MapKit.framework in Frameworks */,
 				2908067F1C9E9BC600B6227C /* libz.tbd in Frameworks */,
 				2908067D1C9E9B9300B6227C /* CFNetwork.framework in Frameworks */,
 			);
@@ -182,6 +412,10 @@
 		2900E77D1C9A7258006F3345 = {
 			isa = PBXGroup;
 			children = (
+				2904B3C71CF6C31A001BA723 /* CoreText.framework */,
+				2904B3C51CF6C310001BA723 /* QuartzCore.framework */,
+				2904B3BF1CF6C04D001BA723 /* libsqlite3.0.tbd */,
+				29448C921CE31BD200F351EA /* MapKit.framework */,
 				2908067E1C9E9BC600B6227C /* libz.tbd */,
 				2908067C1C9E9B9300B6227C /* CFNetwork.framework */,
 				2900E7881C9A7258006F3345 /* DAWAEE */,
@@ -200,6 +434,17 @@
 		2900E7881C9A7258006F3345 /* DAWAEE */ = {
 			isa = PBXGroup;
 			children = (
+				2905AA1C1CBE173C00CCF32E /* AskYourPharmacistViewController */,
+				2905AA1D1CBE173C00CCF32E /* DrugInformationViewController */,
+				2905AA1E1CBE173C00CCF32E /* FAQ'sViewController */,
+				2905AA1F1CBE173C00CCF32E /* FirstAdViewController */,
+				2905AA201CBE173C00CCF32E /* MedicineDeliveryViewController */,
+				2905AA211CBE173C00CCF32E /* MyMedicationProfileViewController */,
+				2905AA221CBE173C00CCF32E /* News&ArticlesViewController */,
+				2905AA231CBE173C00CCF32E /* PharmaciesViewController */,
+				2905AA241CBE173C00CCF32E /* ProfileViewController */,
+				2905AA251CBE173C00CCF32E /* SettingsViewController */,
+				290515541CB4FE0F00EAB1B3 /* CalenderView */,
 				2903700D1CA3BB1B00899736 /* HomeViewController */,
 				290805CD1C9E989200B6227C /* Utilities */,
 				290805C71C9E8A5300B6227C /* SIGNIN&SIGNUPController */,
@@ -214,6 +459,7 @@
 		2900E7891C9A7258006F3345 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				296D9B6E1CA92A1B00405A0A /* Images */,
 				2900E78A1C9A7258006F3345 /* main.m */,
 				29B2BB3B1CA7C1FB009ECC22 /* PrefixHeader.pch */,
 			);
@@ -245,6 +491,324 @@
 			path = HomeViewController;
 			sourceTree = "<group>";
 		};
+		29046F501CB62E7F00B0B6CE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2903DCA31CE1A9AF003C9E61 /* Selected@2x.png */,
+				2903DCA41CE1A9AF003C9E61 /* UnSelected@2x.png */,
+				2929A41A1CE09B3500C9C9CC /* cameraicon@2x.png */,
+				2907B0831CCF520400BE609E /* profile@2x.PNG */,
+				29046F511CB62E7F00B0B6CE /* back@2x.png */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		2904B3AE1CF6C02F001BA723 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				2904B3AF1CF6C02F001BA723 /* FMDatabase.h */,
+				2904B3B01CF6C02F001BA723 /* FMDatabase.m */,
+				2904B3B11CF6C02F001BA723 /* FMDatabaseAdditions.h */,
+				2904B3B21CF6C02F001BA723 /* FMDatabaseAdditions.m */,
+				2904B3B31CF6C02F001BA723 /* FMDatabasePool.h */,
+				2904B3B41CF6C02F001BA723 /* FMDatabasePool.m */,
+				2904B3B51CF6C02F001BA723 /* FMDatabaseQueue.h */,
+				2904B3B61CF6C02F001BA723 /* FMDatabaseQueue.m */,
+				2904B3B71CF6C02F001BA723 /* FMDB.h */,
+				2904B3B81CF6C02F001BA723 /* FMResultSet.h */,
+				2904B3B91CF6C02F001BA723 /* FMResultSet.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		2904B3C11CF6C252001BA723 /* CommonFunction */ = {
+			isa = PBXGroup;
+			children = (
+				2904B3C21CF6C252001BA723 /* CommonFunctions.h */,
+				2904B3C31CF6C252001BA723 /* CommonFunctions.m */,
+				2904B3CC1CF6CB6C001BA723 /* PrefixHeader.pch */,
+			);
+			path = CommonFunction;
+			sourceTree = "<group>";
+		};
+		290515541CB4FE0F00EAB1B3 /* CalenderView */ = {
+			isa = PBXGroup;
+			children = (
+				290515551CB4FE0F00EAB1B3 /* CalendarKit */,
+				290515901CB4FE0F00EAB1B3 /* CKDemoViewController.h */,
+				290515911CB4FE0F00EAB1B3 /* CKDemoViewController.m */,
+			);
+			path = CalenderView;
+			sourceTree = "<group>";
+		};
+		290515551CB4FE0F00EAB1B3 /* CalendarKit */ = {
+			isa = PBXGroup;
+			children = (
+				290515561CB4FE0F00EAB1B3 /* CalendarKit.h */,
+				290515571CB4FE0F00EAB1B3 /* Categories */,
+				290515761CB4FE0F00EAB1B3 /* Core */,
+				290515831CB4FE0F00EAB1B3 /* Headers */,
+				2905158A1CB4FE0F00EAB1B3 /* View Controllers */,
+			);
+			path = CalendarKit;
+			sourceTree = "<group>";
+		};
+		290515571CB4FE0F00EAB1B3 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				290515581CB4FE0F00EAB1B3 /* Foundation */,
+				2905156E1CB4FE0F00EAB1B3 /* UIKit */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		290515581CB4FE0F00EAB1B3 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				290515591CB4FE0F00EAB1B3 /* NSCalendar */,
+				290515641CB4FE0F00EAB1B3 /* NSCalendarCategories.h */,
+				290515651CB4FE0F00EAB1B3 /* NSDate */,
+				2905156A1CB4FE0F00EAB1B3 /* NSDateComponents+AllComponents.h */,
+				2905156B1CB4FE0F00EAB1B3 /* NSDateComponents+AllComponents.m */,
+				2905156C1CB4FE0F00EAB1B3 /* NSString+Color.h */,
+				2905156D1CB4FE0F00EAB1B3 /* NSString+Color.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		290515591CB4FE0F00EAB1B3 /* NSCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				2905155A1CB4FE0F00EAB1B3 /* NSCalendar+Components.h */,
+				2905155B1CB4FE0F00EAB1B3 /* NSCalendar+Components.m */,
+				2905155C1CB4FE0F00EAB1B3 /* NSCalendar+DateComparison.h */,
+				2905155D1CB4FE0F00EAB1B3 /* NSCalendar+DateComparison.m */,
+				2905155E1CB4FE0F00EAB1B3 /* NSCalendar+DateManipulation.h */,
+				2905155F1CB4FE0F00EAB1B3 /* NSCalendar+DateManipulation.m */,
+				290515601CB4FE0F00EAB1B3 /* NSCalendar+Juncture.h */,
+				290515611CB4FE0F00EAB1B3 /* NSCalendar+Juncture.m */,
+				290515621CB4FE0F00EAB1B3 /* NSCalendar+Ranges.h */,
+				290515631CB4FE0F00EAB1B3 /* NSCalendar+Ranges.m */,
+			);
+			path = NSCalendar;
+			sourceTree = "<group>";
+		};
+		290515651CB4FE0F00EAB1B3 /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				290515661CB4FE0F00EAB1B3 /* NSDate+Components.h */,
+				290515671CB4FE0F00EAB1B3 /* NSDate+Components.m */,
+				290515681CB4FE0F00EAB1B3 /* NSDate+Description.h */,
+				290515691CB4FE0F00EAB1B3 /* NSDate+Description.m */,
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
+		2905156E1CB4FE0F00EAB1B3 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				2905156F1CB4FE0F00EAB1B3 /* UIColor+HexString.h */,
+				290515701CB4FE0F00EAB1B3 /* UIColor+HexString.m */,
+				290515711CB4FE0F00EAB1B3 /* UIView */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		290515711CB4FE0F00EAB1B3 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				290515721CB4FE0F00EAB1B3 /* UIView+AnimatedFrame.h */,
+				290515731CB4FE0F00EAB1B3 /* UIView+AnimatedFrame.m */,
+				290515741CB4FE0F00EAB1B3 /* UIView+Border.h */,
+				290515751CB4FE0F00EAB1B3 /* UIView+Border.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		290515761CB4FE0F00EAB1B3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				290515771CB4FE0F00EAB1B3 /* CKCalendarCell.h */,
+				290515781CB4FE0F00EAB1B3 /* CKCalendarCell.m */,
+				290515791CB4FE0F00EAB1B3 /* CKCalendarEvent.h */,
+				2905157A1CB4FE0F00EAB1B3 /* CKCalendarEvent.m */,
+				2905157B1CB4FE0F00EAB1B3 /* CKCalendarHeaderView.h */,
+				2905157C1CB4FE0F00EAB1B3 /* CKCalendarHeaderView.m */,
+				2905157D1CB4FE0F00EAB1B3 /* CKCalendarView.h */,
+				2905157E1CB4FE0F00EAB1B3 /* CKCalendarView.m */,
+				2905157F1CB4FE0F00EAB1B3 /* CKTableViewCell.h */,
+				290515801CB4FE0F00EAB1B3 /* CKTableViewCell.m */,
+				290515811CB4FE0F00EAB1B3 /* MBPolygonView.h */,
+				290515821CB4FE0F00EAB1B3 /* MBPolygonView.m */,
+				2904B3CD1CF6E3DF001BA723 /* NewCalenderTableViewCell.h */,
+				2904B3CE1CF6E3DF001BA723 /* NewCalenderTableViewCell.m */,
+				2904B3CF1CF6E3DF001BA723 /* NewCalenderTableViewCell.xib */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		290515831CB4FE0F00EAB1B3 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				290515841CB4FE0F00EAB1B3 /* CKCalendarCellColors.h */,
+				290515851CB4FE0F00EAB1B3 /* CKCalendarDataSource.h */,
+				290515861CB4FE0F00EAB1B3 /* CKCalendarDelegate.h */,
+				290515871CB4FE0F00EAB1B3 /* CKCalendarHeaderColors.h */,
+				290515881CB4FE0F00EAB1B3 /* CKCalendarMonthCellStates.h */,
+				290515891CB4FE0F00EAB1B3 /* CKCalendarViewModes.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		2905158A1CB4FE0F00EAB1B3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2905158B1CB4FE0F00EAB1B3 /* CKCalendarViewController.h */,
+				2905158C1CB4FE0F00EAB1B3 /* CKCalendarViewController.m */,
+				2905158D1CB4FE0F00EAB1B3 /* CKCalendarViewControllerInternal.h */,
+				2905158E1CB4FE0F00EAB1B3 /* CKCalendarViewControllerInternal.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		2905AA1C1CBE173C00CCF32E /* AskYourPharmacistViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2905AA2B1CBE342000CCF32E /* AskYourPharmacistViewController.h */,
+				2905AA2C1CBE342000CCF32E /* AskYourPharmacistViewController.m */,
+				2905AA2D1CBE342000CCF32E /* AskYourPharmacistViewController.xib */,
+			);
+			path = AskYourPharmacistViewController;
+			sourceTree = "<group>";
+		};
+		2905AA1D1CBE173C00CCF32E /* DrugInformationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2905AA301CBE400900CCF32E /* DrugInformationViewController.h */,
+				2905AA311CBE400900CCF32E /* DrugInformationViewController.m */,
+				2905AA321CBE400900CCF32E /* DrugInformationViewController.xib */,
+			);
+			path = DrugInformationViewController;
+			sourceTree = "<group>";
+		};
+		2905AA1E1CBE173C00CCF32E /* FAQ'sViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2905AA581CBE410800CCF32E /* FAQsViewController.h */,
+				2905AA591CBE410800CCF32E /* FAQsViewController.m */,
+				2905AA5A1CBE410800CCF32E /* FAQsViewController.xib */,
+			);
+			path = "FAQ'sViewController";
+			sourceTree = "<group>";
+		};
+		2905AA1F1CBE173C00CCF32E /* FirstAdViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2905AA3A1CBE401E00CCF32E /* FirstAdViewController.h */,
+				2905AA3B1CBE401E00CCF32E /* FirstAdViewController.m */,
+				2905AA3C1CBE401E00CCF32E /* FirstAdViewController.xib */,
+			);
+			path = FirstAdViewController;
+			sourceTree = "<group>";
+		};
+		2905AA201CBE173C00CCF32E /* MedicineDeliveryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2905AA3F1CBE406A00CCF32E /* MedicineDeliveryViewController.h */,
+				2905AA401CBE406A00CCF32E /* MedicineDeliveryViewController.m */,
+				2905AA411CBE406A00CCF32E /* MedicineDeliveryViewController.xib */,
+			);
+			path = MedicineDeliveryViewController;
+			sourceTree = "<group>";
+		};
+		2905AA211CBE173C00CCF32E /* MyMedicationProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2905AA441CBE407300CCF32E /* MyMedicationProfileViewController.h */,
+				2905AA451CBE407300CCF32E /* MyMedicationProfileViewController.m */,
+				2905AA461CBE407300CCF32E /* MyMedicationProfileViewController.xib */,
+				290BDC141CE84CB700BC0C43 /* ProfileMedicineViewController.h */,
+				290BDC151CE84CB700BC0C43 /* ProfileMedicineViewController.m */,
+				290BDC191CE8552800BC0C43 /* ProfileMedicineViewController.xib */,
+				290BDC1B1CE8609C00BC0C43 /* AddMedicationViewController.h */,
+				290BDC1C1CE8609C00BC0C43 /* AddMedicationViewController.m */,
+				290BDC1D1CE8609C00BC0C43 /* AddMedicationViewController.xib */,
+			);
+			path = MyMedicationProfileViewController;
+			sourceTree = "<group>";
+		};
+		2905AA221CBE173C00CCF32E /* News&ArticlesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2905AA5D1CBE431600CCF32E /* NewsArticlesViewController.h */,
+				2905AA5E1CBE431600CCF32E /* NewsArticlesViewController.m */,
+				2905AA5F1CBE431600CCF32E /* NewsArticlesViewController.xib */,
+			);
+			path = "News&ArticlesViewController";
+			sourceTree = "<group>";
+		};
+		2905AA231CBE173C00CCF32E /* PharmaciesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2905AA4E1CBE408400CCF32E /* PharmaciesViewController.h */,
+				2905AA4F1CBE408400CCF32E /* PharmaciesViewController.m */,
+				2905AA501CBE408400CCF32E /* PharmaciesViewController.xib */,
+			);
+			path = PharmaciesViewController;
+			sourceTree = "<group>";
+		};
+		2905AA241CBE173C00CCF32E /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2905AA261CBE311200CCF32E /* ProfileViewController.h */,
+				2905AA271CBE311200CCF32E /* ProfileViewController.m */,
+				2905AA281CBE311200CCF32E /* ProfileViewController.xib */,
+				2907B07E1CCF42DD00BE609E /* ProfileTableViewCell.h */,
+				2907B07F1CCF42DD00BE609E /* ProfileTableViewCell.m */,
+				2907B0801CCF42DD00BE609E /* ProfileTableViewCell.xib */,
+				2907B0851CCF579E00BE609E /* ProfileDetailViewController.h */,
+				2907B0861CCF579E00BE609E /* ProfileDetailViewController.m */,
+				2907B0871CCF579E00BE609E /* ProfileDetailViewController.xib */,
+				2929A4151CE080F500C9C9CC /* AddProfileViewController.h */,
+				2929A4161CE080F500C9C9CC /* AddProfileViewController.m */,
+				2929A4171CE080F500C9C9CC /* AddProfileViewController.xib */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
+		2905AA251CBE173C00CCF32E /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2905AA531CBE408B00CCF32E /* SettingsViewController.h */,
+				2905AA541CBE408B00CCF32E /* SettingsViewController.m */,
+				2905AA551CBE408B00CCF32E /* SettingsViewController.xib */,
+			);
+			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		2906ED391CB37E5400459FE2 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				290515521CB4FB1200EAB1B3 /* circle@2x.png */,
+				2906ED6C1CB3B03B00459FE2 /* left_slider@2x.png */,
+				2906ED6D1CB3B03B00459FE2 /* right_slider@2x.png */,
+				2906ED541CB38EC000459FE2 /* Ask Your Pharmacist@2x.png */,
+				2906ED551CB38EC000459FE2 /* Drug Information@2x.png */,
+				2906ED561CB38EC000459FE2 /* FAQ's@2x.png */,
+				2906ED571CB38EC000459FE2 /* First Aid@2x.png */,
+				2906ED581CB38EC000459FE2 /* Home@2x.png */,
+				2906ED591CB38EC000459FE2 /* Logout@2x.png */,
+				2906ED5A1CB38EC000459FE2 /* Medicine Delivery@2x.png */,
+				2906ED5B1CB38EC000459FE2 /* My Medication Profile@2x.png */,
+				2906ED5C1CB38EC000459FE2 /* News & Articles@2x.png */,
+				2906ED5D1CB38EC000459FE2 /* Pharmacies@2x.png */,
+				2906ED5E1CB38EC000459FE2 /* Profiles@2x.png */,
+				2906ED5F1CB38EC000459FE2 /* Settings@2x.png */,
+				2906ED3A1CB37E5400459FE2 /* menu_icon@2x.png */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
 		290805C71C9E8A5300B6227C /* SIGNIN&SIGNUPController */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +822,9 @@
 		290805CD1C9E989200B6227C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				2904B3C11CF6C252001BA723 /* CommonFunction */,
+				2904B3AE1CF6C02F001BA723 /* FMDB */,
+				290BDC241CE8821500BC0C43 /* JNExpandableTableView */,
 				29B2BB381CA7BE96009ECC22 /* Constants.h */,
 				29B2BB391CA7BE96009ECC22 /* Constants.m */,
 				290806851C9E9BFC00B6227C /* SDWebImage */,
@@ -416,6 +983,25 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		290BDC241CE8821500BC0C43 /* JNExpandableTableView */ = {
+			isa = PBXGroup;
+			children = (
+				290BDC251CE8821500BC0C43 /* JNExpandableTableView.h */,
+				290BDC261CE8821500BC0C43 /* JNExpandableTableView.m */,
+			);
+			path = JNExpandableTableView;
+			sourceTree = "<group>";
+		};
+		296D9B6E1CA92A1B00405A0A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				29046F501CB62E7F00B0B6CE /* Profile */,
+				2906ED391CB37E5400459FE2 /* HomeScreen */,
+				296D9B6F1CA92A1B00405A0A /* logo_small@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -473,12 +1059,50 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2929A4191CE080F500C9C9CC /* AddProfileViewController.xib in Resources */,
 				29C8EC431CA7ADE400233032 /* CVCell.xib in Resources */,
 				290805CC1C9E8A9500B6227C /* SIGNINViewController.xib in Resources */,
+				2906ED651CB38EC000459FE2 /* Logout@2x.png in Resources */,
+				290515531CB4FB1200EAB1B3 /* circle@2x.png in Resources */,
+				2906ED3B1CB37E5400459FE2 /* menu_icon@2x.png in Resources */,
+				2906ED681CB38EC000459FE2 /* News & Articles@2x.png in Resources */,
 				2900E7A81C9A72BD006F3345 /* ViewController.xib in Resources */,
+				2904B3D11CF6E3DF001BA723 /* NewCalenderTableViewCell.xib in Resources */,
+				2905AA2F1CBE342000CCF32E /* AskYourPharmacistViewController.xib in Resources */,
+				2906ED661CB38EC000459FE2 /* Medicine Delivery@2x.png in Resources */,
+				290BDC1F1CE8609C00BC0C43 /* AddMedicationViewController.xib in Resources */,
+				2906ED6E1CB3B03B00459FE2 /* left_slider@2x.png in Resources */,
 				290370121CA3BB2700899736 /* HomeViewController.xib in Resources */,
+				2906ED621CB38EC000459FE2 /* FAQ's@2x.png in Resources */,
+				2906ED641CB38EC000459FE2 /* Home@2x.png in Resources */,
+				2907B0891CCF579E00BE609E /* ProfileDetailViewController.xib in Resources */,
 				290806361C9E989200B6227C /* IQKeyboardManager.bundle in Resources */,
+				2905AA2A1CBE311200CCF32E /* ProfileViewController.xib in Resources */,
+				2905AA3E1CBE401E00CCF32E /* FirstAdViewController.xib in Resources */,
+				2907B0841CCF520400BE609E /* profile@2x.PNG in Resources */,
+				2906ED691CB38EC000459FE2 /* Pharmacies@2x.png in Resources */,
 				2900E7961C9A7258006F3345 /* Assets.xcassets in Resources */,
+				2906ED6F1CB3B03B00459FE2 /* right_slider@2x.png in Resources */,
+				2905AA481CBE407300CCF32E /* MyMedicationProfileViewController.xib in Resources */,
+				2906ED601CB38EC000459FE2 /* Ask Your Pharmacist@2x.png in Resources */,
+				2905AA431CBE406A00CCF32E /* MedicineDeliveryViewController.xib in Resources */,
+				29046F521CB62E7F00B0B6CE /* back@2x.png in Resources */,
+				2906ED6A1CB38EC000459FE2 /* Profiles@2x.png in Resources */,
+				2907B0821CCF42DD00BE609E /* ProfileTableViewCell.xib in Resources */,
+				2905AA5C1CBE410800CCF32E /* FAQsViewController.xib in Resources */,
+				2903DCA51CE1A9AF003C9E61 /* Selected@2x.png in Resources */,
+				2905AA571CBE408B00CCF32E /* SettingsViewController.xib in Resources */,
+				2929A41B1CE09B3500C9C9CC /* cameraicon@2x.png in Resources */,
+				2906ED611CB38EC000459FE2 /* Drug Information@2x.png in Resources */,
+				2906ED671CB38EC000459FE2 /* My Medication Profile@2x.png in Resources */,
+				2903DCA61CE1A9AF003C9E61 /* UnSelected@2x.png in Resources */,
+				2906ED6B1CB38EC000459FE2 /* Settings@2x.png in Resources */,
+				290BDC1A1CE8552800BC0C43 /* ProfileMedicineViewController.xib in Resources */,
+				296D9B701CA92A1B00405A0A /* logo_small@2x.png in Resources */,
+				2905AA521CBE408400CCF32E /* PharmaciesViewController.xib in Resources */,
+				2906ED631CB38EC000459FE2 /* First Aid@2x.png in Resources */,
+				2905AA611CBE431600CCF32E /* NewsArticlesViewController.xib in Resources */,
+				2905AA341CBE400900CCF32E /* DrugInformationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,48 +1113,92 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2905159F1CB4FE0F00EAB1B3 /* CKCalendarEvent.m in Sources */,
 				290806AF1C9E9BFC00B6227C /* SDWebImageDownloaderOperation.m in Sources */,
 				290806B51C9E9BFC00B6227C /* UIImage+WebP.m in Sources */,
+				2905AA561CBE408B00CCF32E /* SettingsViewController.m in Sources */,
+				290515A71CB4FE0F00EAB1B3 /* CKDemoViewController.m in Sources */,
+				2905159B1CB4FE0F00EAB1B3 /* UIColor+HexString.m in Sources */,
 				290806B11C9E9BFC00B6227C /* SDWebImagePrefetcher.m in Sources */,
 				290806371C9E989200B6227C /* IQKeyboardManager.m in Sources */,
 				290806AB1C9E9BFC00B6227C /* SDImageCache.m in Sources */,
+				2904B3BB1CF6C02F001BA723 /* FMDatabaseAdditions.m in Sources */,
 				290806B01C9E9BFC00B6227C /* SDWebImageManager.m in Sources */,
+				2905AA2E1CBE342000CCF32E /* AskYourPharmacistViewController.m in Sources */,
+				2929A4181CE080F500C9C9CC /* AddProfileViewController.m in Sources */,
+				2905AA291CBE311200CCF32E /* ProfileViewController.m in Sources */,
+				290515921CB4FE0F00EAB1B3 /* NSCalendar+Components.m in Sources */,
 				290806391C9E989200B6227C /* IQSegmentedNextPrevious.m in Sources */,
+				290515951CB4FE0F00EAB1B3 /* NSCalendar+Juncture.m in Sources */,
+				2904B3BD1CF6C02F001BA723 /* FMDatabaseQueue.m in Sources */,
+				290BDC171CE84CB700BC0C43 /* ProfileMedicineViewController.m in Sources */,
+				2905AA511CBE408400CCF32E /* PharmaciesViewController.m in Sources */,
+				290515991CB4FE0F00EAB1B3 /* NSDateComponents+AllComponents.m in Sources */,
 				290806771C9E9B0600B6227C /* ASIDownloadCache.m in Sources */,
+				2907B0811CCF42DD00BE609E /* ProfileTableViewCell.m in Sources */,
+				2907B0881CCF579E00BE609E /* ProfileDetailViewController.m in Sources */,
+				290515A31CB4FE0F00EAB1B3 /* MBPolygonView.m in Sources */,
+				2905AA5B1CBE410800CCF32E /* FAQsViewController.m in Sources */,
 				2908063B1C9E989200B6227C /* IQTitleBarButtonItem.m in Sources */,
 				2908063E1C9E989200B6227C /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				2905159A1CB4FE0F00EAB1B3 /* NSString+Color.m in Sources */,
+				2905159C1CB4FE0F00EAB1B3 /* UIView+AnimatedFrame.m in Sources */,
 				290806B81C9E9BFC00B6227C /* UIView+WebCacheOperation.m in Sources */,
 				290806791C9E9B0600B6227C /* ASIHTTPRequest.m in Sources */,
 				290806AC1C9E9BFC00B6227C /* SDWebImageCompat.m in Sources */,
 				290806561C9E9AAE00B6227C /* Reachability.m in Sources */,
+				2905AA331CBE400900CCF32E /* DrugInformationViewController.m in Sources */,
+				290BDC271CE8821500BC0C43 /* JNExpandableTableView.m in Sources */,
 				290805CB1C9E8A9500B6227C /* SIGNINViewController.m in Sources */,
+				2905AA421CBE406A00CCF32E /* MedicineDeliveryViewController.m in Sources */,
 				290806AD1C9E9BFC00B6227C /* SDWebImageDecoder.m in Sources */,
+				290515971CB4FE0F00EAB1B3 /* NSDate+Components.m in Sources */,
 				2908067B1C9E9B0600B6227C /* ASINetworkQueue.m in Sources */,
+				2904B3BC1CF6C02F001BA723 /* FMDatabasePool.m in Sources */,
 				290806781C9E9B0600B6227C /* ASIFormDataRequest.m in Sources */,
+				290515A11CB4FE0F00EAB1B3 /* CKCalendarView.m in Sources */,
+				290515A51CB4FE0F00EAB1B3 /* CKCalendarViewControllerInternal.m in Sources */,
+				290515961CB4FE0F00EAB1B3 /* NSCalendar+Ranges.m in Sources */,
+				290515941CB4FE0F00EAB1B3 /* NSCalendar+DateManipulation.m in Sources */,
 				290806761C9E9B0600B6227C /* ASIDataDecompressor.m in Sources */,
+				290515A01CB4FE0F00EAB1B3 /* CKCalendarHeaderView.m in Sources */,
+				2905AA3D1CBE401E00CCF32E /* FirstAdViewController.m in Sources */,
 				29B2BB3A1CA7BE96009ECC22 /* Constants.m in Sources */,
 				290806B61C9E9BFC00B6227C /* UIImageView+HighlightedWebCache.m in Sources */,
 				2900E7A61C9A72AB006F3345 /* ViewController.m in Sources */,
 				2908063A1C9E989200B6227C /* IQTextView.m in Sources */,
 				290806381C9E989200B6227C /* IQNSArray+Sort.m in Sources */,
 				290806B41C9E9BFC00B6227C /* UIImage+MultiFormat.m in Sources */,
+				290515A21CB4FE0F00EAB1B3 /* CKTableViewCell.m in Sources */,
 				2908067A1C9E9B0600B6227C /* ASIInputStream.m in Sources */,
 				290806A91C9E9BFC00B6227C /* MKAnnotationView+WebCache.m in Sources */,
 				290806AA1C9E9BFC00B6227C /* NSData+ImageContentType.m in Sources */,
+				290515981CB4FE0F00EAB1B3 /* NSDate+Description.m in Sources */,
 				290370111CA3BB2700899736 /* HomeViewController.m in Sources */,
 				290806B21C9E9BFC00B6227C /* UIButton+WebCache.m in Sources */,
 				290806B71C9E9BFC00B6227C /* UIImageView+WebCache.m in Sources */,
+				2904B3BE1CF6C02F001BA723 /* FMResultSet.m in Sources */,
 				2900E7A51C9A72AB006F3345 /* AppDelegate.m in Sources */,
 				2908063D1C9E989200B6227C /* IQUIView+Hierarchy.m in Sources */,
+				290515A41CB4FE0F00EAB1B3 /* CKCalendarViewController.m in Sources */,
 				29C8EC421CA7ADE400233032 /* CVCell.m in Sources */,
 				290806B31C9E9BFC00B6227C /* UIImage+GIF.m in Sources */,
+				2904B3BA1CF6C02F001BA723 /* FMDatabase.m in Sources */,
 				290806AE1C9E9BFC00B6227C /* SDWebImageDownloader.m in Sources */,
 				290806351C9E989200B6227C /* IQBarButtonItem.m in Sources */,
 				290806751C9E9B0600B6227C /* ASIDataCompressor.m in Sources */,
+				290BDC1E1CE8609C00BC0C43 /* AddMedicationViewController.m in Sources */,
 				290806741C9E9B0600B6227C /* ASIAuthenticationDialog.m in Sources */,
 				2908063F1C9E989200B6227C /* IQUIWindow+Hierarchy.m in Sources */,
 				2908063C1C9E989200B6227C /* IQToolbar.m in Sources */,
+				2904B3C41CF6C252001BA723 /* CommonFunctions.m in Sources */,
+				2904B3D01CF6E3DF001BA723 /* NewCalenderTableViewCell.m in Sources */,
+				2905159E1CB4FE0F00EAB1B3 /* CKCalendarCell.m in Sources */,
+				2905AA471CBE407300CCF32E /* MyMedicationProfileViewController.m in Sources */,
+				2905159D1CB4FE0F00EAB1B3 /* UIView+Border.m in Sources */,
 				2900E78B1C9A7258006F3345 /* main.m in Sources */,
+				290515931CB4FE0F00EAB1B3 /* NSCalendar+DateComparison.m in Sources */,
+				2905AA601CBE431600CCF32E /* NewsArticlesViewController.m in Sources */,
 				2908065A1C9E9AD500B6227C /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,6 +1223,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -574,7 +1243,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -598,6 +1267,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -611,7 +1281,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -622,7 +1292,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = DAWAEE/Utilities/CommonFunction/PrefixHeader.pch;
 				INFOPLIST_FILE = DAWAEE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ae.gov.dha.DAWAEE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -633,7 +1306,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = DAWAEE/Utilities/CommonFunction/PrefixHeader.pch;
 				INFOPLIST_FILE = DAWAEE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ae.gov.dha.DAWAEE;
 				PRODUCT_NAME = "$(TARGET_NAME)";

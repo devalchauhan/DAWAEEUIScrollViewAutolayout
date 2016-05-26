@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  DAWAEE
+//
+//  Created by Syed Fahad Anwar on 5/26/16.
+//  Copyright © 2016 Deval Chauhan. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "Constants.h"
+#import "ASIFormDataRequest.h"
+#import "Reachability.h"
+#import "AppDelegate.h"
+#import "MBProgressHUD.h"
+#import "ViewController.h"
+#import "UIImageView+WebCache.h"
+#endif /* PrefixHeader_pch */

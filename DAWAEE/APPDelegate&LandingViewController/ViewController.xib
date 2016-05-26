@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
+                <outlet property="btn_CreateAccount" destination="BaS-Tk-fDW" id="QfX-sE-lHG"/>
                 <outlet property="lbl_HWYLS" destination="jAf-YU-8aU" id="9pY-Da-ogM"/>
                 <outlet property="lbl_OR" destination="xYY-dY-ReD" id="KEI-6n-4cN"/>
                 <outlet property="scrl" destination="Wfb-kM-Apo" id="R2k-Xk-0HG"/>
@@ -28,7 +29,7 @@
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="297" id="wCZ-hu-Ofp"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
                         <mask key="constraints">
@@ -44,6 +45,7 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebf-da-s5O">
                                     <rect key="frame" x="58" y="5" width="297" height="34"/>
+                                    <color key="backgroundColor" red="0.40784313725490196" green="0.58039215686274515" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="297" id="OVW-VP-Ctv"/>
                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="297" id="TNp-em-pFc"/>
@@ -51,8 +53,9 @@
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="lb3-Ph-sha"/>
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="297" id="qWT-kx-wb3"/>
                                     </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                     <state key="normal" title="SIGN IN">
-                                        <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <variation key="default">
                                         <mask key="constraints">
@@ -72,8 +75,8 @@
                                         <constraint firstAttribute="width" constant="124" id="Zka-D0-1IA"/>
                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="124" id="xuF-pO-dQw"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                     <variation key="default">
                                         <mask key="constraints">
@@ -83,6 +86,7 @@
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZU-ge-2H9">
                                     <rect key="frame" x="58" y="102" width="297" height="34"/>
+                                    <color key="backgroundColor" red="0.035294117647058823" green="0.36862745098039218" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="4vg-9O-uHq"/>
                                         <constraint firstAttribute="width" constant="297" id="LFb-rh-pAe"/>
@@ -92,8 +96,9 @@
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="297" id="Sdh-1F-wCb"/>
                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="297" id="ny4-tS-EUt"/>
                                     </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                     <state key="normal" title="SIGN IN WITH DHA ID">
-                                        <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <variation key="default">
                                         <mask key="constraints">
@@ -104,29 +109,9 @@
                                         <action selector="SIGNINWITHDHAIDClicked" destination="-1" eventType="touchUpInside" id="ELb-Um-Kgm"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vc1-rj-gsr">
-                                    <rect key="frame" x="58" y="150" width="297" height="34"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="297" id="35M-tS-rq4"/>
-                                        <constraint firstAttribute="height" constant="34" id="3N7-Vi-XDX"/>
-                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="34" id="B3n-cQ-jnf"/>
-                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="34" id="BCU-r7-XBd"/>
-                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="297" id="HHq-pp-Rdi"/>
-                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="297" id="NEC-GL-tai"/>
-                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="297" id="TMa-s2-Kk3"/>
-                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="V7V-Z2-Cbf"/>
-                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="297" id="Yfg-fn-gdp"/>
-                                    </constraints>
-                                    <state key="normal" title="SIGN IN WITH EMIRATES ID">
-                                        <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="SIGNINWITHEMIRATESIDClicked" destination="-1" eventType="touchUpInside" id="zPZ-Ze-k7N"/>
-                                    </connections>
-                                </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGh-Wn-aER">
-                                    <rect key="frame" x="58" y="217" width="297" height="1"/>
-                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <rect key="frame" x="58" y="163" width="297" height="1"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="297" id="Adm-bH-IUr"/>
                                         <constraint firstAttribute="height" constant="1" id="GZX-Px-wAy"/>
@@ -137,37 +122,38 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaS-Tk-fDW">
-                                    <rect key="frame" x="58" y="238" width="297" height="34"/>
+                                    <rect key="frame" x="58" y="188" width="297" height="34"/>
+                                    <color key="backgroundColor" red="0.41960784313725491" green="0.72941176470588232" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="297" id="Jco-eZ-Fh9"/>
                                         <constraint firstAttribute="height" constant="34" id="Nk3-7I-kps"/>
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="297" id="ajd-aU-gaL"/>
                                     </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                     <state key="normal" title="CREATE ACCOUNT">
-                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
                                         <action selector="CREATEACCOUNTClicked" destination="-1" eventType="touchUpInside" id="fS1-ks-M9v"/>
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.41960784309999999" green="0.72941176470000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="xYY-dY-ReD" firstAttribute="centerX" secondItem="CGh-Wn-aER" secondAttribute="centerX" id="5hh-48-SRF"/>
                                 <constraint firstItem="xYY-dY-ReD" firstAttribute="centerX" secondItem="56A-dM-O63" secondAttribute="centerX" id="Acd-KM-e9K"/>
-                                <constraint firstItem="CGh-Wn-aER" firstAttribute="top" secondItem="vc1-rj-gsr" secondAttribute="bottom" constant="33" id="C8O-NJ-sWs"/>
                                 <constraint firstItem="xYY-dY-ReD" firstAttribute="top" secondItem="Ebf-da-s5O" secondAttribute="bottom" constant="21" id="Cv3-6H-uAC"/>
-                                <constraint firstAttribute="bottom" secondItem="CGh-Wn-aER" secondAttribute="bottom" constant="91" id="DzF-ML-0Ah"/>
+                                <constraint firstAttribute="bottom" secondItem="CGh-Wn-aER" secondAttribute="bottom" constant="145" id="DzF-ML-0Ah"/>
                                 <constraint firstItem="xYY-dY-ReD" firstAttribute="centerX" secondItem="uZU-ge-2H9" secondAttribute="centerX" id="SSn-up-bZO"/>
                                 <constraint firstItem="xYY-dY-ReD" firstAttribute="top" secondItem="56A-dM-O63" secondAttribute="top" constant="60" id="VeZ-dZ-WQr"/>
                                 <constraint firstItem="xYY-dY-ReD" firstAttribute="centerX" secondItem="Ebf-da-s5O" secondAttribute="centerX" id="YEJ-1U-e65"/>
                                 <constraint firstItem="uZU-ge-2H9" firstAttribute="top" secondItem="xYY-dY-ReD" secondAttribute="bottom" constant="21" id="jyB-wx-VV6"/>
                                 <constraint firstItem="xYY-dY-ReD" firstAttribute="centerX" secondItem="BaS-Tk-fDW" secondAttribute="centerX" id="odR-zm-9EV"/>
-                                <constraint firstItem="BaS-Tk-fDW" firstAttribute="top" secondItem="CGh-Wn-aER" secondAttribute="bottom" constant="20" id="y5S-pl-skm"/>
-                                <constraint firstItem="xYY-dY-ReD" firstAttribute="centerX" secondItem="vc1-rj-gsr" secondAttribute="centerX" id="zv5-lG-kci"/>
+                                <constraint firstItem="BaS-Tk-fDW" firstAttribute="top" secondItem="CGh-Wn-aER" secondAttribute="bottom" constant="24" id="y5S-pl-skm"/>
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" red="0.41960784309999999" green="0.72941176470000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="56A-dM-O63" firstAttribute="leading" secondItem="Wfb-kM-Apo" secondAttribute="leading" id="ELV-VJ-umK"/>
                         <constraint firstItem="56A-dM-O63" firstAttribute="centerX" secondItem="Wfb-kM-Apo" secondAttribute="centerX" id="U8j-cD-rOd"/>
@@ -186,8 +172,9 @@
                         <constraint firstAttribute="width" constant="297" id="Jeu-Ff-Zav"/>
                         <constraint firstAttribute="height" constant="30" id="L83-DF-eGY"/>
                     </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                     <state key="normal" title="Arabic">
-                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="LANGUAGECHANGEDClicked" destination="-1" eventType="touchUpInside" id="lMb-L5-LPP"/>
@@ -195,7 +182,7 @@
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pg-b4-arw">
                     <rect key="frame" x="170" y="697" width="73" height="1"/>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="6Kp-p5-UeF"/>
                         <constraint firstAttribute="height" constant="1" id="IcV-uj-x5f"/>
@@ -206,9 +193,17 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_small.png" translatesAutoresizingMaskIntoConstraints="NO" id="MbL-Vm-Y2n">
+                    <rect key="frame" x="151" y="30" width="110" height="176"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="176" id="Jpx-gj-wAX"/>
+                        <constraint firstAttribute="width" constant="110" id="Kng-8R-5TL"/>
+                    </constraints>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.41960784309999999" green="0.72941176470000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="MbL-Vm-Y2n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="3gW-01-UJr"/>
                 <constraint firstItem="jAf-YU-8aU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="228" id="4OZ-Y8-jAf"/>
                 <constraint firstItem="3Pg-b4-arw" firstAttribute="top" secondItem="epK-sr-Au5" secondAttribute="bottom" constant="2" id="Aw1-Eh-qZE"/>
                 <constraint firstItem="jAf-YU-8aU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="187" id="JtS-Pd-TWk"/>
@@ -218,6 +213,7 @@
                 <constraint firstItem="jAf-YU-8aU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Q4J-hw-Z0L"/>
                 <constraint firstItem="Wfb-kM-Apo" firstAttribute="centerX" secondItem="jAf-YU-8aU" secondAttribute="centerX" id="Sjl-Gx-nPD"/>
                 <constraint firstItem="epK-sr-Au5" firstAttribute="leading" secondItem="jAf-YU-8aU" secondAttribute="leading" id="dQz-dV-o7F"/>
+                <constraint firstItem="MbL-Vm-Y2n" firstAttribute="centerX" secondItem="jAf-YU-8aU" secondAttribute="centerX" constant="-1.5" id="jvQ-MX-aNZ"/>
                 <constraint firstItem="Wfb-kM-Apo" firstAttribute="top" secondItem="jAf-YU-8aU" secondAttribute="bottom" constant="29" id="tfm-6X-Cpf"/>
                 <constraint firstAttribute="bottom" secondItem="epK-sr-Au5" secondAttribute="bottom" constant="41" id="zrm-ef-h4G"/>
             </constraints>
@@ -230,4 +226,7 @@
             <point key="canvasLocation" x="286" y="329"/>
         </view>
     </objects>
+    <resources>
+        <image name="logo_small.png" width="110" height="176"/>
+    </resources>
 </document>

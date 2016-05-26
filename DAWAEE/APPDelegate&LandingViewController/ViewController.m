@@ -21,6 +21,9 @@
     self.navigationController.navigationBarHidden=TRUE;
     obj_SIGNINViewController = [[SIGNINViewController alloc] initWithNibName:@"SIGNINViewController" bundle:nil];
     
+    [[self.btn_CreateAccount layer] setBorderWidth:1.0f];
+    [[self.btn_CreateAccount layer] setBorderColor:[UIColor whiteColor].CGColor];
+    
     [self.scrl setContentSize:CGSizeMake(0, 300)];
     self.scrl.translatesAutoresizingMaskIntoConstraints  = NO;
     

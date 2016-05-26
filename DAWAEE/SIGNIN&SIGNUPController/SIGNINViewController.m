@@ -8,6 +8,7 @@
 
 #import "SIGNINViewController.h"
 #import "IQKeyboardManager.h"
+#import "Constants.h"
 
 @interface SIGNINViewController ()
 
@@ -19,6 +20,34 @@
     [super viewDidLoad];
     [[IQKeyboardManager sharedManager] setEnable:YES];
     [[IQKeyboardManager sharedManager] setShouldToolbarUsesTextFieldTintColor:YES];
+
+    
+    [self.scrl setContentSize:CGSizeMake(0, 300)];
+    self.scrl.translatesAutoresizingMaskIntoConstraints  = NO;
+    
+    
+    self.view_SCRLContainer.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.scrl addSubview:self.view_SCRLContainer];
+    
+    NSDictionary *views = @{@"beeView":self.view_SCRLContainer};
+    if (IS_IPHONE_5) {
+        NSDictionary *metrics = @{@"height" : @300, @"width" : @320};
+        [self.scrl addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[beeView(height)]|" options:kNilOptions metrics:metrics views:views]];
+        [self.scrl addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[beeView(width)]|" options:kNilOptions metrics:metrics views:views]];
+    }
+    else if (IS_IPHONE_6){
+        NSDictionary *metrics = @{@"height" : @300, @"width" : @375};
+        [self.scrl addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[beeView(height)]|" options:kNilOptions metrics:metrics views:views]];
+        [self.scrl addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[beeView(width)]|" options:kNilOptions metrics:metrics views:views]];
+    }
+    else if (IS_IPHONE_6Plus){
+        NSDictionary *metrics = @{@"height" : @300, @"width" : @414};
+        [self.scrl addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[beeView(height)]|" options:kNilOptions metrics:metrics views:views]];
+        [self.scrl addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[beeView(width)]|" options:kNilOptions metrics:metrics views:views]];
+    }
+    
+    
+    
     
 }
 -(void)viewWillAppear:(BOOL)animated

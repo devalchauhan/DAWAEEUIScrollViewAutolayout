@@ -16,6 +16,7 @@
 @property (nonatomic,weak) IBOutlet UILabel *lbl_OR,*lbl_HWYLS;
 @property (nonatomic,weak) IBOutlet UIScrollView *scrl;
 @property (nonatomic,weak) IBOutlet UIView *view_SCRLContainer;
+@property (nonatomic,weak) IBOutlet UIButton *btn_CreateAccount;
 -(IBAction)SIGNINClicked;
 -(IBAction)SIGNINWITHDHAIDClicked;
 -(IBAction)SIGNINWITHEMIRATESIDClicked;

@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "HomeViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,13 +19,32 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    ViewController *obj_ViewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:obj_ViewController];
+    /*ViewController *obj_ViewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:obj_ViewController];*/
+    HomeViewController *obj_HomeViewController = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:obj_HomeViewController];
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
-
+- (id)init
+{
+    self = [super init];
+    if (self != nil)
+    {
+        NSString *remoteHostName = @"www.google.com";
+        self.hostReachability = [Reachability reachabilityWithHostName:remoteHostName];
+        [self.hostReachability startNotifier];
+        
+        self.internetReachability = [Reachability reachabilityForInternetConnection];
+        [self.internetReachability startNotifier];
+        
+        self.wifiReachability = [Reachability reachabilityForLocalWiFi];
+        [self.wifiReachability startNotifier];
+    }
+    return self;
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
