@@ -16,4 +16,8 @@
 #import "MBProgressHUD.h"
 #import "ViewController.h"
 #import "UIImageView+WebCache.h"
+#import "NSData+Base64.h"
+#import "Base64.h"
+#import "NSData+AESCrypt.h"
+#import "CommonFunctions.h"
 #endif /* PrefixHeader_pch */

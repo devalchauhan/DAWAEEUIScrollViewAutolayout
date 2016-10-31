@@ -19,9 +19,15 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-@interface CKCalendarView () <CKCalendarHeaderViewDataSource, CKCalendarHeaderViewDelegate, UITableViewDataSource, UITableViewDelegate> {
+#import "CKCalendarViewControllerInternal.h"
+#import "TimeSlotCell.h"
+
+@interface CKCalendarView () <CKCalendarHeaderViewDataSource, CKCalendarHeaderViewDelegate, UITableViewDataSource, UITableViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource> {
     NSUInteger _firstWeekDay;
 }
+
+@property (nonatomic, strong) NSMutableDictionary *data;
+@property (nonnull, strong) NSMutableArray *ary_EventFromDB,*ary_MorningEvents,*ary_AfternoonEvents,*ary_EveningEvents,*ary_NightEvents;
 
 @property (nonatomic, strong) NSMutableSet* spareCells;
 @property (nonatomic, strong) NSMutableSet* usedCells;
@@ -31,13 +37,19 @@
 @property (nonatomic, strong) CKCalendarHeaderView *headerView;
 
 @property (nonatomic, strong) UITableView *table;
-@property (nonatomic, strong) NSMutableArray *events;
+@property (nonatomic, strong) UILabel *lbl_SelectTimeSlot;
+@property (nonatomic, strong) UICollectionView *cview_timeslots;
+@property (nonatomic, strong) NSMutableArray *ary_TimeSlots;
+@property (nonatomic, strong) UILabel *lbl_SelectedDateAndTimeSlot;
+@property (nonatomic, strong) UIButton *btn_Reschedule;
+@property (nonatomic, strong) NSIndexPath *selectedItemIndexPath;
 
 //  The index of the highlighted cell
 @property (nonatomic, assign) NSUInteger selectedIndex;
 
 @property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
 @property (nonatomic, strong) UIPanGestureRecognizer *panGesture;
+
 
 @property (nonatomic, strong) UIView *wrapper;
 @property (nonatomic, strong) NSDate *previousDate;
@@ -52,6 +64,7 @@
 // Designated Initializer
 
 -(void)commonInitializer {
+
     _locale = [NSLocale currentLocale];
     _calendar = [NSCalendar autoupdatingCurrentCalendar];
     [_calendar setLocale:_locale];
@@ -68,27 +81,75 @@
     _headerView = [CKCalendarHeaderView new];
     
     
-    //  Accessory Table
-    _table = [UITableView new];
-    [_table setDelegate:self];
-    [_table setDataSource:self];
     
-    [_table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    [_table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"noDataCell"];
+    _lbl_SelectTimeSlot = [UILabel new];
+    _lbl_SelectTimeSlot.backgroundColor = [UIColor colorWithRed:(224.0f/255.0f) green:(228.0f/255.0f) blue:(227.0f/255.0f) alpha:1.0];
+    _lbl_SelectTimeSlot.text = @"     SELECT A TIME SLOT";
+    _lbl_SelectTimeSlot.textAlignment = NSTextAlignmentLeft;
+    _lbl_SelectTimeSlot.textColor = [UIColor colorWithRed:(63.0f/255.0f) green:(62.0f/255.0f) blue:(62.0f/255.0f) alpha:1.0];
     
+    UICollectionViewFlowLayout *layout=[UICollectionViewFlowLayout new];
+    
+    
+    _cview_timeslots=[[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) collectionViewLayout:layout];
+    [_cview_timeslots setDataSource:self];
+    [_cview_timeslots setDelegate:self];
+    [_cview_timeslots registerClass:[TimeSlotCell class] forCellWithReuseIdentifier:@"TimeSlotCell"];
+    [_cview_timeslots setBackgroundColor:[UIColor whiteColor]];
+    
+    
+    _cview_timeslots.scrollEnabled= FALSE;
+    
+    [self.cview_timeslots.layer setShadowColor:[UIColor blackColor].CGColor];
+    [self.cview_timeslots.layer setShadowOpacity:0.5];
+    [self.cview_timeslots.layer setShadowRadius:2.0];
+    [self.cview_timeslots.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
+    
+    
+    
+    
+    _view_Bottom = [UIView new];
+    _view_Bottom.backgroundColor = [UIColor colorWithRed:(224.0f/255.0f) green:(228.0f/255.0f) blue:(227.0f/255.0f) alpha:1.0];
+    _lbl_SelectedDateAndTimeSlot = [UILabel new];
+    _lbl_SelectedDateAndTimeSlot.text = @"Wednseday";
+    _lbl_SelectedDateAndTimeSlot.textAlignment = NSTextAlignmentCenter;
+    _lbl_SelectedDateAndTimeSlot.font = [UIFont boldSystemFontOfSize:15.0f];
+    _lbl_SelectedDateAndTimeSlot.textColor = [UIColor colorWithRed:(31.0f/255.0f) green:(143.0f/255.0f) blue:(155.0f/255.0f) alpha:1.0];
+    
+    _btn_Reschedule = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_btn_Reschedule addTarget:self action:@selector(RescheduleClicked) forControlEvents:UIControlEventTouchUpInside];
+    [_btn_Reschedule setBackgroundColor:[UIColor colorWithRed:(31.0f/255.0f) green:(143.0f/255.0f) blue:(155.0f/255.0f) alpha:1.0]];
+    _btn_Reschedule.layer.cornerRadius = 22.0f;
+    _btn_Reschedule.clipsToBounds=YES;
+    [_btn_Reschedule setTitle:@"RESCHEDULE" forState:UIControlStateNormal];
+    
+    //[self LoadTimeSlotForSelectedDate:[NSDate date]];
+    //Add Date Button
+    btn_Date = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn_Date.titleLabel setFont:[UIFont fontWithName:@"Arial" size:15.0]];
+    [btn_Date setBackgroundColor:[UIColor colorWithRed:(173.0/255.0) green:(173.0/255.0) blue:(173.0/255.0) alpha:1.0]];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd MMM yyyy"];
+    NSTimeZone *currentTimeZone = [NSTimeZone defaultTimeZone];
+    [dateFormatter setTimeZone:currentTimeZone];
+    [btn_Date setTitle:[NSString stringWithFormat:@"%@",[dateFormatter stringFromDate:_date]] forState:UIControlStateNormal];
+    //[btn_Date addTarget:self action:@selector(FullScreenTimeLineClicked:) forControlEvents:UIControlEventTouchUpInside];
     //  Events for selected date
-    _events = [NSMutableArray new];
-    for (int i=0; i<10; i++) {
-        NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-        [dic setValue:@"title" forKey:@"title"];
-        [dic setValue:_date forKey:@"date"];
-        [dic setValue:@"info" forKey:@"into"];
-        [_events addObject:dic];
-    }
-    
+    /*_events = [NSMutableArray new];
+     for (int i=0; i<10; i++) {
+     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+     [dic setValue:@"title" forKey:@"title"];
+     [dic setValue:_date forKey:@"date"];
+     [dic setValue:@"info" forKey:@"into"];
+     [_events addObject:dic];
+     }
+     */
     //  Used for animation
     _previousDate = [NSDate date];
     _wrapper = [UIView new];
+    
+    
+    
     _isAnimating = NO;
     
     //  Date bounds
@@ -97,15 +158,27 @@
     
     //  First Weekday
     _firstWeekDay = [_calendar firstWeekday];
-
+    
+    NSString *str = [dateFormatter stringFromDate:[NSDate date]];
+    NSDate *date_to_take = [dateFormatter dateFromString:str];
+    double timestamp = [date_to_take timeIntervalSince1970];
+    double millisecondsForToday = timestamp*1000;
+    
+    
+    [[self table] reloadData];
 }
+
+
 - (instancetype)init
 {
     self = [super init];
     
     if (self) {
+        appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+        prefs = [NSUserDefaults standardUserDefaults];
         [self commonInitializer];
     }
+    self.backgroundColor = [UIColor whiteColor];
     return self;
 }
 
@@ -156,7 +229,7 @@
             return [d1 compare:d2];
         }];
         
-        [self setEvents:sortedArray];
+        
     }
     
     /**
@@ -164,6 +237,7 @@
      */
     
     [[self table] reloadData];
+    [[self cview_timeslots] reloadData];
     
     /**
      *  TODO: Possibly add a delegate method here, per issue #20.
@@ -214,7 +288,7 @@
     
     if (animated) {
         [UIView animateWithDuration:0.4 animations:^{
-            [super setFrame:frame];    
+            [super setFrame:frame];
         }];
     }
     else
@@ -307,7 +381,7 @@
     
     CGRect frame = [self _rectForDisplayMode:[self displayMode]];
     CGPoint origin = [self frame].origin;
-    frame.origin = CGPointMake(0, 64);
+    frame.origin = CGPointMake(0, 108);
     [self setFrame:frame animated:animated];
     /* Install a wrapper */
     
@@ -336,6 +410,9 @@
     CGRect tableFrame = [[self superview] bounds];
     tableFrame.origin.y = CGRectGetMaxY(self.frame);
     
+    
+    
+    
     /**
      *  Correct for iPhone 6 and iPhone 6 Plus shadow bug.
      */
@@ -344,14 +421,47 @@
     {
         tableFrame.origin.y = CGRectGetMaxY(self.headerView.frame);
     }
+    tableFrame.origin.x = 0;
+    tableFrame.origin.y+= 0;
     
+    [[self lbl_SelectTimeSlot] setFrame:CGRectMake(tableFrame.origin.x, tableFrame.origin.y, tableFrame.size.width, 50) animated:animated];
+    
+    [[self superview] insertSubview:_lbl_SelectTimeSlot belowSubview:self];
+    
+    tableFrame.origin.y+=50;
     tableFrame.size.height = CGRectGetHeight(self.superview.frame) - tableFrame.origin.y;
     
-    [[self table] setFrame:tableFrame animated:animated];
     
-    [[self superview] insertSubview:[self table] belowSubview:self];
+    //tableFrame.size.width -= 50;
+    long highet_cvview_timeslot = 0;
+    if (self.ary_TimeSlots.count<=4)
+        highet_cvview_timeslot = 60;
+    else if (self.ary_TimeSlots.count<=8&&self.ary_TimeSlots.count>4)
+        highet_cvview_timeslot = 110;
+    else if (self.ary_TimeSlots.count<=12&&self.ary_TimeSlots.count>8)
+        highet_cvview_timeslot = 160;
+    else if (self.ary_TimeSlots.count<=16&&self.ary_TimeSlots.count>12)
+        highet_cvview_timeslot = 210;
+    
+    
+    [[self cview_timeslots] setFrame:CGRectMake(tableFrame.origin.x, tableFrame.origin.y, tableFrame.size.width, highet_cvview_timeslot) animated:animated];
+    
+    CGRect frame_view_bottom = _cview_timeslots.frame;
+    [[self view_Bottom] setFrame:CGRectMake(frame_view_bottom.origin.x, frame_view_bottom.origin.y+frame_view_bottom.size.height, frame_view_bottom.size.width, 115) animated:animated];
+    
+    _lbl_SelectedDateAndTimeSlot.frame = CGRectMake(20, 20, frame_view_bottom.size.width-40, 21);
+    [self.view_Bottom addSubview:_lbl_SelectedDateAndTimeSlot];
+    
+    
+    _btn_Reschedule.frame = CGRectMake(20, 60, frame_view_bottom.size.width-40, 45);
+    [self.view_Bottom addSubview:_btn_Reschedule];
+    
+    
+    [[self superview] insertSubview:[self cview_timeslots] aboveSubview:self];
+    [[self superview] insertSubview:[self view_Bottom] belowSubview:self];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ChangeScrlHeight" object:self];
 }
-
 
 
 - (void)_layoutCells
@@ -462,13 +572,18 @@
             [cell setNumber:@(day)];
             ///Deval add Calender Event here
             
+            
             /* STEP 5: Show event dots */
             
             if([[self dataSource] respondsToSelector:@selector(calendarView:eventsForDate:)])
             {
-                NSInteger reminderNumber = (unsigned long)[[[self dataSource] calendarView:self eventsForDate:workingDate] count];
+                
+                double timestamp = [workingDate timeIntervalSince1970];
+                double milliseconds = timestamp*1000;
+                
+                NSInteger reminderNumber = 0;
                 [cell setReminderNumber:@(reminderNumber)];
-                BOOL showDot = ([[[self dataSource] calendarView:self eventsForDate:workingDate] count] > 0);
+                BOOL showDot = (reminderNumber > 0);
                 [cell setShowDot:showDot];
             }
             else
@@ -518,12 +633,27 @@
         [self _moveCellsIntoView:cellsBeingAnimatedIntoView andCellsOutOfView:cellsToRemoveAfterAnimation usingOffset:yOffset];
         [self _cleanupCells:cellsToRemoveAfterAnimation];
         [cellsBeingAnimatedIntoView removeAllObjects];
-        [self setIsAnimating:NO];        
+        [self setIsAnimating:NO];
     }
     
     
 }
 
+
+
+-(NSString*)GetPartOfDay:(NSString*)scheduled_time
+{
+    int scheduledTime =[scheduled_time intValue];
+    
+    if(scheduledTime >= 240 && scheduledTime < 720)
+        return @"MORNING";
+    else if(scheduledTime > 719 && scheduledTime < 1080)
+        return @"AFTERNOON";
+    else if(scheduledTime > 1079 && scheduledTime < 1439)
+        return @"EVENING";
+    else
+        return @"NIGHT";
+}
 #pragma mark - Cell Animation
 
 - (void)_moveCellsIntoView:(NSMutableSet *)cellsBeingAnimatedIntoView andCellsOutOfView:(NSMutableSet *)cellsToRemoveAfterAnimation usingOffset:(CGFloat)yOffset
@@ -633,7 +763,7 @@
 - (void)setTimeZone:(NSTimeZone *)timeZone animated:(BOOL)animated
 {
     if (!timeZone) {
-        timeZone = [NSTimeZone localTimeZone];
+        timeZone = [NSTimeZone defaultTimeZone];
     }
     
     [[self calendar] setTimeZone:timeZone];
@@ -672,7 +802,7 @@
     
     NSDateComponents *components = [self.calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:date];
     date = [self.calendar dateFromComponents:components];
-
+    
     BOOL minimumIsBeforeMaximum = [self _minimumDateIsBeforeMaximumDate];
     
     if (minimumIsBeforeMaximum) {
@@ -692,14 +822,20 @@
     
     _previousDate = _date;
     _date = date;
-    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd MMM yyyy"];
+    NSTimeZone *currentTimeZone = [NSTimeZone defaultTimeZone];
+    [dateFormatter setTimeZone:currentTimeZone];
+    [btn_Date setTitle:[NSString stringWithFormat:@"%@",[dateFormatter stringFromDate:_date]] forState:UIControlStateNormal];
     if ([[self delegate] respondsToSelector:@selector(calendarView:didSelectDate:)]) {
         [[self delegate] calendarView:self didSelectDate:date];
     }
-    
+    /// load event from DB here Deval Chauhan
     if ([[self dataSource] respondsToSelector:@selector(calendarView:eventsForDate:)]) {
-        [self setEvents:[[self dataSource] calendarView:self eventsForDate:date]];
-        [[self table] reloadData];
+        //double timestamp = [date timeIntervalSince1970];
+        //double milliseconds = timestamp*1000;
+        [self LoadTimeSlotForSelectedDate:date];
+        [[self cview_timeslots] reloadData];
     }
     
     //  Update the index
@@ -731,7 +867,7 @@
 - (void)setMaximumDate:(NSDate *)maximumDate animated:(BOOL)animated
 {
     _maximumDate = maximumDate;
-    [self setDate:[self date] animated:animated];    
+    [self setDate:[self date] animated:animated];
 }
 
 - (void)setDataSource:(id<CKCalendarViewDataSource>)dataSource
@@ -818,7 +954,7 @@
     {
         return [[self calendar] date:[self date] isSameWeekAs:[self minimumDate]];
     }
-
+    
     return [[self calendar] date:[self date] isSameDayAs:[self minimumDate]];
 }
 
@@ -850,7 +986,7 @@
 {
     NSDate *date = [self date];
     NSDate *today = [NSDate date];
-
+    
     /* If the cells are animating, don't do anything or we'll break the view */
     
     if ([self isAnimating]) {
@@ -881,8 +1017,13 @@
         //  Otherwise, add a month and then go to the first of the month
         else{
             date = [[self calendar] dateByAddingMonths:1 toDate:date];              //  Add a month
+            
+            //CKCalendarViewControllerInternal *obj_CKCalendarViewControllerInternal = [CKCalendarViewControllerInternal new];
+            //[obj_CKCalendarViewControllerInternal CreateEventsForCalender:date];
+            //[self CreateEventsForCalender:date];
             NSUInteger day = [[self calendar] daysInDate:date];                     //  Only then go to the first of the next month.
             date = [[self calendar] dateBySubtractingDays:day-1 fromDate:date];
+            
         }
         
         //  If today is in the visible month, jump to today
@@ -929,6 +1070,8 @@
     //apply the new date
     [self setDate:date animated:YES];
 }
+
+
 
 - (void)backwardTapped
 {
@@ -1028,83 +1171,194 @@
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    NSInteger count = [[self events] count];
-    
-    if (count == 0) {
-        count = 2;
-    }
-    
-    return count;
+    return self.ary_TimeSlots.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSUInteger count = [[self events] count];
+    static NSString *cellIdentifier = @"TimeSlotCell";
     
-    if (count == 0) {
-        UITableViewCell *cell = [[self table] dequeueReusableCellWithIdentifier:@"noDataCell"];
-        [[cell textLabel] setTextAlignment:NSTextAlignmentCenter];
-        [[cell textLabel] setTextColor:[UIColor colorWithWhite:0.2 alpha:0.8]];
-        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-        
-        if ([indexPath row] == 1) {
-            [[cell textLabel] setText:NSLocalizedString(@"No Events", @"A label for a table with no events.")];
-        }
-        else
-        {
-            [[cell textLabel] setText:@""];
-        }
-        return cell;
-    }
-
-    //CKTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-
-    CKCalendarEvent *event = [[self events] objectAtIndex:[indexPath row]];
-    NewCalenderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    /*  Uncomment this block to use nib-based cells */
+    // UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    // UILabel *titleLabel = (UILabel *)[cell viewWithTag:100];
+    // [titleLabel setText:cellData];
+    /* end of nib-based cell block */
     
-    [[cell textLabel] setText:[event title]];
-    
-    UIView *colorView = [[UIView alloc] initWithFrame:CGRectMake(3, 6, 20, 20)];
-    CALayer *layer = [CALayer layer];
-    layer.backgroundColor = [[event color] CGColor];
-    layer.frame = colorView.frame;
-    [colorView.layer insertSublayer:layer atIndex:0];
-    
-    if(nil != event.image)
-    {
-        cell.imageView.image = [UIImage imageWithData:event.image];
-    }
-    else {
-        cell.imageView.image = nil;
+    /* Uncomment this block to use subclass-based cells */
+    TimeSlotCell *cell = (TimeSlotCell *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    if (self.selectedItemIndexPath != nil && [indexPath compare:self.selectedItemIndexPath] == NSOrderedSame) {
+        [cell.lbl_Time.layer setBorderWidth:0.0f];
+        cell.iv_Checked.hidden=FALSE;
+        cell.lbl_Time.backgroundColor = [UIColor colorWithRed:(159.0/255.0) green:(204.0/255.0) blue:(98.0/255.0) alpha:1.0];
+        cell.lbl_Time.textColor = [UIColor whiteColor];
+    } else {
+        [cell.lbl_Time.layer setBorderColor:[UIColor grayColor].CGColor];
+        [cell.lbl_Time.layer setBorderWidth:1.0f];
+        cell.iv_Checked.hidden=TRUE;
+        cell.lbl_Time.backgroundColor = [UIColor clearColor];
+        cell.lbl_Time.textColor = [UIColor grayColor];
     }
     
-    [cell addSubview:colorView];
     
+    cell.lbl_Time.text = [NSString stringWithFormat:@"%@",[self.ary_TimeSlots objectAtIndex:indexPath.row]];
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(90, 40);
+}
+- (UIEdgeInsets)collectionView:(UICollectionView*)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(10, 0, 10, 0); // top, left, bottom, right
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    
+    return 5.0;
+}
+
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath  {
+    NSMutableArray *indexPaths = [NSMutableArray arrayWithObject:indexPath];
+    if (self.selectedItemIndexPath)
+    {
+        if ([indexPath compare:self.selectedItemIndexPath] == NSOrderedSame)
+            self.selectedItemIndexPath = nil;
+        else
+        {
+            [indexPaths addObject:self.selectedItemIndexPath];
+            self.selectedItemIndexPath = indexPath;
+        }
+    }
+    else
+        self.selectedItemIndexPath = indexPath;
+    [collectionView reloadItemsAtIndexPaths:indexPaths];
+}
+
+-(void)RescheduleClicked
 {
     
-    if ([[self events] count] == 0) {
-        return;
-    }
-    
-    if ([[self delegate] respondsToSelector:@selector(calendarView:didSelectEvent:)]) {
-        [[self delegate] calendarView:self didSelectEvent:[self events][[indexPath row]]];
-    }
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+-(void)LoadTimeSlotForSelectedDate:(NSDate*)date
+{
+    
+    [self GetNextAvailableAppointmentsWSCall];
+    self.ary_TimeSlots = [NSMutableArray array];
+    for (int i=0; i<12; i++) {
+        [self.ary_TimeSlots addObject:@"8AM-9AM"];
+    }
+    
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEEE, dd MMMM yyyy"];
+    NSTimeZone *currentTimeZone = [NSTimeZone defaultTimeZone];
+    [dateFormatter setTimeZone:currentTimeZone];
+    NSString *str_Date = [dateFormatter stringFromDate:date];
+    NSString *str_TimeSlot = @"8AM - 9PM";
+    NSString *str_daySuffix = [self daySuffixForDate:date];
+    NSArray *temp_date = [str_Date componentsSeparatedByString:@" "];
+    NSString *str_finalDate = [NSString stringWithFormat:@"%@ %d%@ %@ %@",[temp_date objectAtIndex:0],[[temp_date objectAtIndex:1] intValue],str_daySuffix,[temp_date objectAtIndex:2],[temp_date objectAtIndex:3]];
+    _lbl_SelectedDateAndTimeSlot.text = [NSString stringWithFormat:@"%@ - %@",str_finalDate,str_TimeSlot];
+    [self.cview_timeslots reloadData];
+}
+- (NSString *)daySuffixForDate:(NSDate *)date {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSInteger dayOfMonth = [calendar component:NSCalendarUnitDay fromDate:date];
+    switch (dayOfMonth) {
+        case 1:
+        case 21:
+        case 31: return @"st";
+        case 2:
+        case 22: return @"nd";
+        case 3:
+        case 23: return @"rd";
+        default: return @"th";
+    }
+}
+-(void)GetNextAvailableAppointmentsWSCall
+{
+    [appDelegate.HUD show:YES];
+    NSString *uid = [prefs valueForKey:@"UID"];
+    NSString *deviceType = @"IPhone";//,*IsLinking = @"N";
+    NSString *deviceToken = [prefs stringForKey:@"REGISTRATION_ID"];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        deviceType=@"IPhone";
+    }
+    else
+    {
+        deviceType=@"IPad";
+    }
+    
+    NSString *encryptedString = [CommonFunctions EnctyrptToken:uid];
+    
+    appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+    NSLog(@"%@",appDelegate.dic_SelectedAppointmentDetails);
+    
+    
+    NSMutableArray *ary_SelectedAppointmentDetails = [NSMutableArray array];
+    [ary_SelectedAppointmentDetails addObject:appDelegate.dic_SelectedAppointmentDetails];
+    
+    
+    NSLog(@"%@",ary_SelectedAppointmentDetails);
+    NSData *postData = [NSJSONSerialization dataWithJSONObject:appDelegate.dic_SelectedAppointmentDetails options:0 error:nil];
+    
+    
+    /*NSMutableArray *ary_SelectedAppointmentDetails = [NSMutableArray array];
+    [ary_SelectedAppointmentDetails addObject:appDelegate.dic_SelectedAppointmentDetails];
+    
+    
+    NSData *postData = [NSJSONSerialization dataWithJSONObject:ary_SelectedAppointmentDetails options:0 error:nil];*/
+    
+    
+    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
+    NSString *base64HeaderData = [NSString stringWithFormat:@"Basic %@", encryptedString];
+    
+    
+    //NSURL *nsUrl = [NSURL URLWithString:GetNextAvailableAppointments];
+    NSURL* nsUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://httpbin.org/post"]];
+    NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:nsUrl];
+    [theRequest setHTTPMethod:@"POST"];
+    //[theRequest setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [theRequest setValue:@"2.0" forHTTPHeaderField:@"APIVERSION"];
+    [theRequest setValue:uid forHTTPHeaderField:@"uid"];
+    [theRequest setValue:base64HeaderData forHTTPHeaderField:@"Authorization"];
+    
+    [theRequest setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [theRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    
+    [theRequest setHTTPBody:postData];
+    
+    [NSURLConnection sendAsynchronousRequest:theRequest queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
+     {
+         if ([data length] > 0 && error == nil) {
+             [appDelegate.HUD hide:YES];
+             id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+             NSLog(@"JSON %@",json);
+
+        
+             
+         }
+         else {
+             [appDelegate.HUD hide:YES];
+             NSLog(@"%@",response);
+         }
+     }];
+}
+
+
 
 #pragma mark - First Weekday
 
 - (void)setFirstWeekDay:(NSUInteger)firstWeekDay
 {
-
+    
     _firstWeekDay = firstWeekDay;
     self.calendar.firstWeekday = firstWeekDay;
     
@@ -1237,7 +1491,7 @@
     {
         return [[self calendar]date:date isBeforeDate:[self maximumDate]];
     }
-
+    
     //  If there's no maximum, treat all dates that are before
     //  the minimum as valid
     else if(![self maximumDate])
@@ -1292,7 +1546,7 @@
                 index = [cell index];
                 break;
             }
-
+            
         }
         
         //  Clip the index to minimum and maximum dates
@@ -1305,7 +1559,7 @@
         {
             index = [self _indexFromDate:[self minimumDate]];
         }
-
+        
         // Save the new index
         [self setSelectedIndex:index];
         

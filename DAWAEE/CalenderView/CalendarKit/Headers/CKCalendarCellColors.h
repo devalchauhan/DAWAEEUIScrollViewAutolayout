@@ -28,7 +28,7 @@
 #import "NSString+Color.h"
 
 #define kCalendarColorBlue [@"#1980e5" toColor]
-#define kCalendarColorLightGray [@"#e2e2e4" toColor]
+#define kCalendarColorLightGray [@"#97C15D" toColor]
 #define kCalendarColorDarkGray [@"#cccbd0" toColor]
 
 #define kCalendarColorBluishGray [@"#7389a5" toColor]

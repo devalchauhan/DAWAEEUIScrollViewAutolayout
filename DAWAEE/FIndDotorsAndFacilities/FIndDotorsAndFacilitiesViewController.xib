@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FIndDotorsAndFacilitiesViewController">
+            <connections>
+                <outlet property="btn_SearchFor" destination="BZz-uQ-oLy" id="8jf-UL-XD6"/>
+                <outlet property="tbl_List" destination="evN-f0-BYz" id="3MB-2e-eYZ"/>
+                <outlet property="view" destination="cz0-dD-CdC" id="ZRm-HK-ywY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="cz0-dD-CdC">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmp-aM-meB">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="AYQ-1g-w8U"/>
+                        <constraint firstAttribute="height" constant="30" id="S9G-83-8Zi"/>
+                    </constraints>
+                    <state key="normal" image="back_status_bar_icon.png"/>
+                    <connections>
+                        <action selector="Back" destination="-1" eventType="touchUpInside" id="ISJ-kf-7dW"/>
+                    </connections>
+                </button>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AcQ-0g-6t9">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="290" id="alT-xK-851"/>
+                    </constraints>
+                </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZz-uQ-oLy">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="jSD-fN-uDm"/>
+                    </constraints>
+                    <state key="normal" title="Search for Doctors">
+                        <color key="titleColor" red="0.19215686269999999" green="0.47058823529999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="c8n-zs-fL6">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="FtS-SI-7mm"/>
+                    </constraints>
+                    <segments>
+                        <segment title="DOCTORS"/>
+                        <segment title="FACILITIES"/>
+                    </segments>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="evN-f0-BYz">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="zMp-eZ-Phm"/>
+                        <outlet property="delegate" destination="-1" id="57t-WP-mPW"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.1215686275" green="0.56078431370000004" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="BZz-uQ-oLy" secondAttribute="trailing" constant="10" id="0eL-ZJ-JOk"/>
+                <constraint firstItem="evN-f0-BYz" firstAttribute="top" secondItem="AcQ-0g-6t9" secondAttribute="bottom" id="EqD-S4-uVL"/>
+                <constraint firstItem="evN-f0-BYz" firstAttribute="top" secondItem="AcQ-0g-6t9" secondAttribute="bottom" id="GEI-cC-wsS"/>
+                <constraint firstAttribute="trailing" secondItem="AcQ-0g-6t9" secondAttribute="trailing" id="Ixb-Bw-JA2"/>
+                <constraint firstItem="AcQ-0g-6t9" firstAttribute="top" secondItem="Rmp-aM-meB" secondAttribute="bottom" constant="9" id="aVg-ch-YV8"/>
+                <constraint firstItem="Rmp-aM-meB" firstAttribute="leading" secondItem="cz0-dD-CdC" secondAttribute="leading" constant="8" id="ebF-do-fNL"/>
+                <constraint firstAttribute="trailing" secondItem="evN-f0-BYz" secondAttribute="trailing" id="egD-5U-dKp"/>
+                <constraint firstItem="c8n-zs-fL6" firstAttribute="top" secondItem="cz0-dD-CdC" secondAttribute="top" constant="26" id="fbC-33-rEo"/>
+                <constraint firstItem="BZz-uQ-oLy" firstAttribute="top" secondItem="Rmp-aM-meB" secondAttribute="bottom" constant="29" id="juF-VL-Pq9"/>
+                <constraint firstItem="Rmp-aM-meB" firstAttribute="top" secondItem="cz0-dD-CdC" secondAttribute="top" constant="25" id="nJ7-C6-4Zn"/>
+                <constraint firstAttribute="bottom" secondItem="evN-f0-BYz" secondAttribute="bottom" id="oQN-92-7OO"/>
+                <constraint firstItem="evN-f0-BYz" firstAttribute="leading" secondItem="cz0-dD-CdC" secondAttribute="leading" id="qYk-VA-A8T"/>
+                <constraint firstItem="c8n-zs-fL6" firstAttribute="leading" secondItem="Rmp-aM-meB" secondAttribute="trailing" constant="9" id="tVH-gR-zb5"/>
+                <constraint firstAttribute="trailing" secondItem="c8n-zs-fL6" secondAttribute="trailing" constant="57" id="u8J-ON-mob"/>
+                <constraint firstItem="BZz-uQ-oLy" firstAttribute="leading" secondItem="cz0-dD-CdC" secondAttribute="leading" constant="10" id="xTf-AJ-8Ve"/>
+                <constraint firstItem="AcQ-0g-6t9" firstAttribute="leading" secondItem="cz0-dD-CdC" secondAttribute="leading" id="zfB-Gn-rr0"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+            <point key="canvasLocation" x="-16" y="-70"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back_status_bar_icon.png" width="18" height="10"/>
+    </resources>
+</document>

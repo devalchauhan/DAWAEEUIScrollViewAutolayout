@@ -10,7 +10,6 @@
 
 @implementation CVCell
 
-@synthesize titleLabel = _titleLabel;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -32,6 +31,19 @@
         
     }
     
+    [self.btn_danger.layer setCornerRadius:12.0f];
+    [self.btn_CompleteHistory.layer setCornerRadius:15.0f];
+    [self.btn_CompleteHistory.layer setBorderColor:[UIColor colorWithRed:(253.0/255.0) green:(164.0/255.0) blue:(64.0/255.0) alpha:1.0].CGColor];
+    [self.btn_CompleteHistory.layer setBorderWidth:1.0f];
+    [self.btn_ClickHereTL.layer setCornerRadius:15.0f];
+    [self.btn_LoginForAppointments.layer setCornerRadius:15.0f];
+    
+    [self.btn_AppointmentsDetails.layer setCornerRadius:15.0f];
+    
+    if (IS_IPHONE_5)
+        ViewHeightConstraint.constant = 140;
+    else if (IS_IPHONE_6Plus)
+        ViewHeightConstraint.constant = 180;
     return self;
     
 }

@@ -16,6 +16,10 @@
     #import "PPRevealSideViewController.h"
     #import "MBProgressHUD.h"
     #import "NSData+Base64.h"
+    #import "Base64.h"
+    #import "NSData+AESCrypt.h"
+    #import "UIImageView+WebCache.h"
+    #import "DBManager.h"
 #endif
 
 #endif /* PrefixHeader_pch */

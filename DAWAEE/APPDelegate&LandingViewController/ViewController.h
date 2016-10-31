@@ -1,26 +1,23 @@
 //
 //  ViewController.h
-//  DAWAEE
+//  SEHHATY
 //
-//  Created by Syed Fahad Anwar on 3/17/16.
+//  Created by Syed Fahad Anwar on 9/29/16.
 //  Copyright © 2016 Deval Chauhan. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "SIGNINViewController.h"
 
 @interface ViewController : UIViewController
 {
-    SIGNINViewController *obj_SIGNINViewController;
+    AppDelegate *appDelegate;
 }
-@property (nonatomic,weak) IBOutlet UILabel *lbl_OR,*lbl_HWYLS;
-@property (nonatomic,weak) IBOutlet UIScrollView *scrl;
-@property (nonatomic,weak) IBOutlet UIView *view_SCRLContainer;
-@property (nonatomic,weak) IBOutlet UIButton *btn_CreateAccount;
--(IBAction)SIGNINClicked;
--(IBAction)SIGNINWITHDHAIDClicked;
--(IBAction)SIGNINWITHEMIRATESIDClicked;
--(IBAction)CREATEACCOUNTClicked;
--(IBAction)LANGUAGECHANGEDClicked;
+@property (nonatomic,strong) IBOutlet UIButton *btn_LWUAP,*btn_LWHCN,*btn_LWMID,*btn_CWOL;
+@property (nonatomic,strong) IBOutlet UIScrollView *scrl;
+@property (nonatomic,strong) IBOutlet UIView *view_SCRLContainer;
+-(IBAction)LoginWithUserIDClicked;
+-(IBAction)LoginWithHCNumberClicked;
+-(IBAction)LoginWithMYIDClicked;
+-(IBAction)ContinueWOLClicked;
 @end
 

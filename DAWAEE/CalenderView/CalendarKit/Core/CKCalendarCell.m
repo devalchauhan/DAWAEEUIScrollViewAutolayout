@@ -44,7 +44,7 @@
         //  Text Colors
         _textColor = kCalendarColorDarkTextGradient;
         _textShadowColor = [UIColor clearColor];
-        _textSelectedColor = [UIColor blackColor];
+        _textSelectedColor = [UIColor whiteColor];
         _textSelectedShadowColor = kCalendarColorSelectedShadowBlue;
         
         _dotColor = kCalendarColorDarkTextGradient;
@@ -91,7 +91,7 @@
     [self configureLabel];
     [self configurelbl_TotalReminder];
     [self configureDot];
-    
+    self.layer.cornerRadius=26.0f;
     [self addSubview:[self label]];
     [self addSubview:[self lbl_TotalReminder]];
     //[self addSubview:[self dot]];
@@ -104,7 +104,8 @@
     [super setFrame:frame];
     
     self.label.frame = CGRectMake(0, 0, CGRectGetWidth(frame), CGRectGetHeight(frame));
-    self.lbl_TotalReminder.frame = CGRectMake(0, 15, CGRectGetWidth(frame), CGRectGetHeight(frame));
+    self.lbl_TotalReminder.frame = CGRectMake(0, 10, CGRectGetWidth(frame), CGRectGetHeight(frame));
+    
 }
 
 
@@ -133,6 +134,7 @@
     _number = number;
     NSString *stringVal = [number stringValue];
     [[self lbl_TotalReminder] setText:stringVal];
+    [[self lbl_TotalReminder] setBackgroundColor:[UIColor greenColor]];
 }
 
 - (void)setShowDot:(BOOL)showDot
@@ -176,9 +178,22 @@
     [lbl_TotalReminder setTextAlignment:NSTextAlignmentCenter];
     lbl_TotalReminder.layer.cornerRadius = 8.0f;
     lbl_TotalReminder.clipsToBounds = YES;
-    [lbl_TotalReminder setTextColor:[UIColor blackColor]];
-    [lbl_TotalReminder setBackgroundColor:[UIColor greenColor]];
-    [lbl_TotalReminder setFrame:CGRectMake(19, 35, 15, 15)];
+    [lbl_TotalReminder setTextColor:[UIColor whiteColor]];
+    //[lbl_TotalReminder setBackgroundColor:[UIColor colorWithRed:(159.0/255.0) green:(204.0/255.0) blue:(98.0/255.0) alpha:1.0]];
+    [lbl_TotalReminder setBackgroundColor:[UIColor lightGrayColor]];
+    
+    UIView *dot = [self dot];
+    
+    CGFloat dotRadius = 15;
+    CGFloat selfHeight = [self frame].size.height;
+    CGFloat selfWidth = [self frame].size.width;
+    
+    [[dot layer] setCornerRadius:dotRadius/2];
+    
+    CGRect dotFrame = CGRectMake(selfWidth/2 - dotRadius/2, (selfHeight - (selfHeight/5)) - dotRadius/2, dotRadius, dotRadius);
+    [[self lbl_TotalReminder] setFrame:dotFrame];
+    
+    
 }
 
 #pragma mark - Dot
@@ -224,7 +239,8 @@
         [self setBackgroundColor:[self todaySelectedBackgroundColor]];
         [[self label] setShadowColor:[self todayTextShadowColor]];
         [[self label] setTextColor:[self todayTextColor]];
-        [self setBorderColor:[UIColor colorWithRed:(41.0/255.0) green:(124.0/255.0) blue:(135.0/255.0) alpha:1.0]];
+        [self setBorderColor:[UIColor colorWithRed:(204.0/255.0) green:(203.0/255.0) blue:(204.0/255.0) alpha:1.0]];
+        
     }
     
     //  Today cell, selected
@@ -233,7 +249,8 @@
         [self setBackgroundColor:[self todayBackgroundColor]];
         [[self label] setShadowColor:[self todayTextShadowColor]];
         [[self label] setTextColor:[self todayTextColor]];
-        [self setBorderColor:[UIColor colorWithRed:(41.0/255.0) green:(124.0/255.0) blue:(135.0/255.0) alpha:1.0]];
+        [self setBorderColor:[UIColor colorWithRed:(204.0/255.0) green:(203.0/255.0) blue:(204.0/255.0) alpha:1.0]];
+        
         [self showBorder];
     }
     
@@ -243,8 +260,10 @@
         [self setBackgroundColor:[self selectedBackgroundColor]];
         [self setBorderColor:[self selectedCellBorderColor]];
         [[self label] setTextColor:[self textSelectedColor]];
+        //[[self label] setTextColor:[UIColor greenColor]];
         [[self label] setShadowColor:[self textSelectedShadowColor]];
         [[self label] setShadowOffset:CGSizeMake(0, -0.5)];
+        [[self lbl_TotalReminder] setBackgroundColor:[UIColor greenColor]];
     }
     
     if (state == CKCalendarMonthCellStateInactive) {
@@ -256,6 +275,7 @@
         [[self label] setAlpha:0.5];    //  Label alpha needs to be lowered
         [[self label] setShadowOffset:CGSizeZero];
         [self setBackgroundColor:[self inactiveSelectedBackgroundColor]];
+        
     }
     else if(state == CKCalendarMonthCellStateOutOfRange)
     {

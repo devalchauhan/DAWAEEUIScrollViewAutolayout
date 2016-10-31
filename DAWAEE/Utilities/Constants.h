@@ -15,7 +15,7 @@
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
-
+#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define IS_IPHONE_5 (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 568.0f)
@@ -31,6 +31,14 @@
 
 @interface Constants : NSObject
 
+extern NSString *const LOGGEDINUSERDATA;
+
+extern NSString *const GetChildrenForSehathy;
+extern NSString *const GetChildVaccinationForSehathy;
+extern NSString *const AddChild;
+extern NSString *const GetEmergencyContacts;
+extern NSString *const GetNextAvailableAppointments;
+extern NSString *const GetAppointmentsByHealthCard;
 extern NSString *const HC_REGISTATION_CODE;
 extern NSString *const REGISTATION_CODE;
 extern NSString *const REGISTRATION_URL;
@@ -53,4 +61,6 @@ extern NSString *const GETLABRESULTSINFORMATION;
 extern NSString *const GETAPPOINTMENTSINFORMATION;
 extern NSString *const LINKUSER;
 extern NSString *const UNLINKUSER;
+
+
 @end

@@ -16,7 +16,13 @@
 #import "CKCalendarDataSource.h"
 
 @interface CKCalendarView : UIView
-
+{
+    UIButton *btn_Date,*btn_AddMedication;
+    AppDelegate *appDelegate;
+    NSUserDefaults *prefs;
+    NSString *query;
+    NSString *str_profileID,*str_parentID,*str_Language;
+}
 @property (nonatomic, assign) CKCalendarDisplayMode displayMode;
 
 @property(nonatomic, strong) NSLocale       *locale;            // default is [NSLocale currentLocale]. setting nil returns to default
@@ -32,6 +38,8 @@
 @property (nonatomic, weak) id<CKCalendarViewDataSource> dataSource;
 @property (nonatomic, weak) id<CKCalendarViewDelegate> delegate;
 
+
+@property (nonatomic, strong) UIView *view_Bottom;
 /* Initializer */
 
 - (instancetype)init;

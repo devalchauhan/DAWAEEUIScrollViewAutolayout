@@ -54,7 +54,7 @@
         [_monthTitle setShadowOffset:CGSizeMake(0, 1)];
         [_monthTitle setBackgroundColor:[UIColor clearColor]];
         [_monthTitle setTextAlignment:NSTextAlignmentLeft];
-        [_monthTitle setFont:[UIFont systemFontOfSize:23.0 weight:UIFontWeightSemibold]];
+        [_monthTitle setFont:[UIFont systemFontOfSize:23.0 weight:UIFontWeightRegular]];
         
         _yearTitle = [UILabel new];
         [_yearTitle setTextColor:[UIColor colorWithRed:(18.0f/255.0f) green:(151.0f/255.0f) blue:(176.0f/255.0f) alpha:1.0]];
@@ -62,7 +62,7 @@
         [_yearTitle setShadowOffset:CGSizeMake(0, 1)];
         [_yearTitle setBackgroundColor:[UIColor clearColor]];
         [_yearTitle setTextAlignment:NSTextAlignmentLeft];
-        [_yearTitle setFont:[UIFont systemFontOfSize:13.0 weight:UIFontWeightRegular]];
+        [_yearTitle setFont:[UIFont systemFontOfSize:11.0 weight:UIFontWeightBold]];
         
         _columnTitles = [NSMutableArray new];
         _columnLabels = [NSMutableArray new];
@@ -99,13 +99,16 @@
     
     CGFloat yOffset = upperRegionHeight/2 - titleLabelHeight/2;
     
-    CGRect frame = CGRectMake(10, yOffset-10, [self frame].size.width, titleLabelHeight);
+    CGRect frame = CGRectMake(10, yOffset, [self frame].size.width, titleLabelHeight);
     [[self monthTitle] setFrame:frame];
     [self addSubview:[self monthTitle]];
+    self.monthTitle.textAlignment = NSTextAlignmentCenter;
     
-    CGRect frame1 = CGRectMake(10, yOffset+10, [self frame].size.width, titleLabelHeight);
+    CGRect frame1 = CGRectMake(10, yOffset-20, [self frame].size.width, titleLabelHeight);
     [[self yearTitle] setFrame:frame1];
     [self addSubview:[self yearTitle]];
+    
+    self.yearTitle.textAlignment = NSTextAlignmentCenter;
     
     /* Update the month title. */
     
@@ -129,16 +132,18 @@
     
     /* Show the forward and back buttons */
 
-        CGRect backFrame = CGRectMake([self frame].size.width-titleLabelHeight-yOffset-30, yOffset-10, titleLabelHeight, titleLabelHeight);
+        CGRect backFrame = CGRectMake(20, yOffset-10, titleLabelHeight, titleLabelHeight);
         CGRect forwardFrame = CGRectMake([self frame].size.width-titleLabelHeight-yOffset, yOffset-10, titleLabelHeight, titleLabelHeight);
     
     
     UIImageView *iv_Back = [UIImageView new];
-    iv_Back.frame = CGRectMake(backFrame.origin.x, backFrame.origin.y, 15, 25);
-    iv_Back.image = [UIImage imageNamed:@"left_slider.png"];
+    //iv_Back.frame = CGRectMake(10, 10, 6, 13);
+    iv_Back.frame = CGRectMake(backFrame.origin.x, backFrame.origin.y+5, 6, 13);
+    iv_Back.image = [UIImage imageNamed:@"list_forward.png"];
     UIImageView *iv_Forward = [UIImageView new];
-    iv_Forward.frame = CGRectMake(forwardFrame.origin.x, forwardFrame.origin.y, 15, 25);;
-    iv_Forward.image = [UIImage imageNamed:@"right_slider.png"];
+    //iv_Forward.frame = CGRectMake(forwardFrame.origin.x, forwardFrame.origin.y, 6, 13);;
+    iv_Forward.frame= CGRectMake(forwardFrame.origin.x, forwardFrame.origin.y+5, 6, 13);
+    iv_Forward.image = [UIImage imageNamed:@"list_forward.png"];
     
     
     [self addSubview:iv_Back];
@@ -165,9 +170,9 @@
     if ([self shouldDisableBackwardButton]) {
         [[self backwardButton] setAlpha:0.5];
     }
-    
-    [self addSubview:[self backwardButton]];
-    [self addSubview:[self forwardButton]];
+    //[_forwardButton setBackgroundColor:[UIColor redColor]];
+    //[self addSubview:[self backwardButton]];
+    //[self addSubview:[self forwardButton]];
     
     /*  Check for a data source for the header to be installed */
     if (![self dataSource]) {
